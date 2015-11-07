@@ -25,14 +25,32 @@ angular.module('ianmd.core.patient.data', [])
         data: patientData,
         currentPatientId: null
       };
+
+      // Keep in mind data is stored least recent changes to recent changes, so reverse array if needed
+      $localStorage.patientHistory = {
+        version: kAppVersion,
+        data: {
+          'mark.dunn': [],
+          'james.smith': []
+        }
+      };
     }
 
     currentPatientId = $localStorage.patientData.currentPatientId;
     patientData = $localStorage.patientData.data;
 
     function savePatientData(patient) {
+      var currentFieldsClone = R.values(R.clone(patientData[patient.id.value]));
       patientData[patient.id.value] = patient;
       patientData[patient.id.value].lastUpdated.value = moment().format('MM/DD/YYYY');
+
+      var changes = R.filter(function(currentField){
+        return !R.equals(currentField.value, patientData[patient.id.value][currentField.id].value);
+      }, currentFieldsClone);
+
+      $localStorage.patientHistory.data[patient.id.value].push(R.clone(changes));
+
+      $localStorage.patientData.data[patient.id.value] = R.clone(patientData[patient.id.value]);
       return true;
     }
 
@@ -44,7 +62,7 @@ angular.module('ianmd.core.patient.data', [])
     }
 
     function getCurrentPatient(){
-      return patientData[currentPatientId];
+      return R.clone(patientData[currentPatientId]);
     }
 
     function setCurrentPatient(patient){
