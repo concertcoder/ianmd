@@ -177,6 +177,14 @@ input:not([type]), input:not([password]) {
   height: 50px;
 }
 
+.button.tiny {
+  border: 1px solid #5783C4;
+  width: 75px;
+  height: 35px;
+  color: #5783C4;
+  border-radius: 50px;
+}
+
 /* TABLES */
 
 table thead tr th {
@@ -207,4 +215,8 @@ table tr:nth-of-type(even):hover {
 
 .patientTable {
   width: 100%;
+}
+
+.break {
+  padding: 10px;
 }
