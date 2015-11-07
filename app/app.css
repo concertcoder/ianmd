@@ -82,10 +82,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #444;
 }
 
-h4 {
-  color: #5783C4;
-}
-
 body {
   font-family: 'brandonText-regular', sans-serif;
   color: #222;
@@ -125,9 +121,11 @@ body a:hover {
 
 .logout {
   margin-top: 10px;
+  white-space: nowrap;
 }
 
 .loginHeadline {
+  margin-top: 30px;
   padding: 50px 0px;
 }
 
@@ -143,8 +141,8 @@ input[type="submit"] {
 }
 
 input:not([type]), input:not([password]) {
-  height: 75px;
-  padding: 5px 15px;
+/*  height: 80px;*/
+  padding: 35px 15px;
   border: 0;
   border-radius: 5px;
 }
@@ -152,21 +150,25 @@ input:not([type]), input:not([password]) {
 ::-webkit-input-placeholder {
   font-family: 'brandonText-light', sans-serif;
   color: #939598;
+  font-size: 18px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
   font-family: 'brandonText-light', sans-serif;
   color: #939598;
+  font-size: 18px;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
   font-family: 'brandonText-light', sans-serif;
   color: #939598;
+  font-size: 18px;
 }
 
 :-ms-input-placeholder {  
   font-family: 'brandonText-light', sans-serif;
   color: #939598;
+  font-size: 18px;
 }
 
 .button.large {
@@ -186,8 +188,7 @@ input:not([type]), input:not([password]) {
 
 .button.round {
   border: 1px solid #fff;
-  width: 125px;
-  height: 50px;
+  padding: 15px 20px;
 }
 
 .button.tiny {
@@ -238,4 +239,32 @@ table tr:nth-of-type(even):hover {
 
 .break {
   padding: 10px;
+}
+
+.helloUser {
+  color: #fff;
+}
+
+/* NAVIGATION */
+.topNav {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  padding-right: 25px;
+}
+
+ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+ul li a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
