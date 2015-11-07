@@ -44,6 +44,17 @@
   background: #eaeaea;
 }
 
+.multiSelect button {
+  padding: 2px 6px 3px 6px !important;
+}
+
+.multiSelect .helperButton.reset {
+  position: relative;
+  top: 1px;
+}
+
+
+
 /* fonts */
 
 @font-face {

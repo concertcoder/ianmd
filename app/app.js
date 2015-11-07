@@ -2,6 +2,7 @@
 
 angular.module('ianmd', [
   'ngRoute',
+  'isteven-multi-select',
   'ianmd.constants',
   'ianmd.core.router.config',
   'ianmd.core.user.service',

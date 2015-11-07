@@ -15,6 +15,16 @@ angular.module('ianmd.components.patientDataForm', [])
 )
 .controller('PatientDataFormCtrl', function(userService, kPatientInputFields, patientData, $location) {
   (function (vm) {
+    /*
+    vm.outputFoods = [];
+    vm.foods = [
+      {name: 'Apple', selected: false  },
+      {name: 'Orange', selected: false },
+      {name: 'Steak',  selected: false  },
+      {name: 'Pizza', selected: false },
+      {name: 'Lobster', selected: false  }
+    ];*/
+
     vm.inEditMode = false;
     vm.currentPatient = patientData.getCurrentPatient();
 
