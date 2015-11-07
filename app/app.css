@@ -33,15 +33,25 @@
 
 .nav {
   background: #5783C4;	
-  padding: 10px 0px;
+  padding: 10px 0px 0px 0px;
+}
+
+.navLogin {
+  background: #5783C4;	
+  padding: 15px 0px;
 }
 
 .logo {
   width: 175px;
 }
 
+.logo-login {
+  width: 125px;
+}
+
 .section {
   background: #eaeaea;
+  padding: 25px 0px;
 }
 
 /* fonts */
@@ -51,14 +61,24 @@
     src: url(fonts/brandonText-regular.ttf);
 }
 
+@font-face {
+    font-family: brandonText-light;
+    src: url(fonts/brandonText-light.ttf);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'brandonText-regular', sans-serif;
   color: #444;
 }
 
+h4 {
+  color: #5783C4;
+}
+
 body {
   font-family: 'brandonText-regular', sans-serif;
   color: #222;
+  background: #eaeaea;
 }
 
 /* BUTTONS */
@@ -83,6 +103,79 @@ body {
   margin-top: 10px;
 }
 
-.placeholder {
+.loginHeadline {
+  padding: 50px 0px;
+}
 
+.loginSection {
+  background: #eaeaea;
+}
+
+/* FORM STUFF */
+
+input[type="submit"] {
+  width: 100%;
+  color: #5783C4;	
+}
+
+input:not([type]), input:not([password]) {
+  height: 75px;
+  padding: 5px 15px;
+  border: 0;
+  border-radius: 5px;
+}
+
+::-webkit-input-placeholder {
+  font-family: 'brandonText-light', sans-serif;
+  color: #939598;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-family: 'brandonText-light', sans-serif;
+  color: #939598;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-family: 'brandonText-light', sans-serif;
+  color: #939598;
+}
+
+:-ms-input-placeholder {  
+  font-family: 'brandonText-light', sans-serif;
+  color: #939598;
+}
+
+.button.large {
+  border: 1px solid #5783C4;	
+  border-radius: 100px;
+}
+
+.button.large:hover {
+  background: #5783C4;	
+  color: #fff;
+}
+
+.button.large:focus {
+  background: #5783C4;	
+  color: #fff;
+}
+
+.button.round {
+  border: 1px solid #fff;
+  width: 125px;
+  height: 50px;
+}
+
+/* TABLES */
+
+table thead tr th {
+  font-family: 'brandonText-regular', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.patientTable {
+  width: 100%;
 }
