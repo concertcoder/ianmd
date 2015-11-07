@@ -1,3 +1,4 @@
-<h1>{{loginCtrl.home}}! Please enter in your credentials</h1>
-<input>
-<input>
+<h1>Please enter in your credentials</h1>
+<input ng-model="loginCtrl.username">
+<input ng-model="loginCtrl.password">
+<input type="button" ng-click="loginCtrl.login()" value="Login">
