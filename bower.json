@@ -11,6 +11,7 @@
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
     "ramda": "~0.18.0",
-    "angular-multi-select": "~4.0.0"
+    "angular-multi-select": "~4.0.0",
+    "ngstorage": "~0.3.9"
   }
 }

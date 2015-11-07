@@ -1,18 +1,30 @@
 'use strict';
 
 angular.module('ianmd.core.patient.data', [])
-  .factory('patientData', function(kPatientInputFields){
+  .factory('patientData', function(kPatientInputFields, $localStorage, kAppVersion){
     var currentPatientId = null;
     var patientData = {};
-    patientData['mark.dunn'] = R.clone(kPatientInputFields);
-    patientData['mark.dunn'].id.value = 'mark.dunn';
-    patientData['mark.dunn'].firstname.value = 'Mark';
-    patientData['mark.dunn'].lastname.value = 'Dunn';
 
-    patientData['james.smith'] = R.clone(kPatientInputFields);
-    patientData['james.smith'].id.value = 'james.smith';
-    patientData['james.smith'].firstname.value = 'James';
-    patientData['james.smith'].lastname.value = 'Smith';
+    if (!$localStorage.patientData || $localStorage.patientData.version !== kAppVersion) {
+      patientData['mark.dunn'] = R.clone(kPatientInputFields);
+      patientData['mark.dunn'].id.value = 'mark.dunn';
+      patientData['mark.dunn'].firstname.value = 'Mark';
+      patientData['mark.dunn'].lastname.value = 'Dunn';
+
+      patientData['james.smith'] = R.clone(kPatientInputFields);
+      patientData['james.smith'].id.value = 'james.smith';
+      patientData['james.smith'].firstname.value = 'James';
+      patientData['james.smith'].lastname.value = 'Smith';
+
+      $localStorage.patientData = {
+        version: kAppVersion,
+        data: patientData,
+        currentPatientId: null
+      };
+    }
+
+    currentPatientId = $localStorage.patientData.currentPatientId;
+    patientData = $localStorage.patientData.data;
 
     function savePatientData(patient) {
       patientData[patient.id.value] = patient;
@@ -31,7 +43,8 @@ angular.module('ianmd.core.patient.data', [])
     }
 
     function setCurrentPatient(patient){
-      return currentPatientId = patient.id.value;
+      currentPatientId = patient.id.value;
+      $localStorage.patientData.currentPatientId = currentPatientId;
     }
 
     return {

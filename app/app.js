@@ -2,6 +2,7 @@
 
 angular.module('ianmd', [
   'ngRoute',
+  'ngStorage',
   'isteven-multi-select',
   'ianmd.constants',
   'ianmd.core.router.config',
