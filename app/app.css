@@ -61,3 +61,28 @@ body {
   color: #222;
 }
 
+/* BUTTONS */
+
+.button {
+  background: transparent;
+  color: #fff;
+  box-shadow: 0;
+  border: 1px solid #fff;
+  font-family: 'brandonText-regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  background: #fff;
+  color: #5783C4;
+}
+
+.logout {
+  margin-top: 10px;
+}
+
+.placeholder {
+
+}

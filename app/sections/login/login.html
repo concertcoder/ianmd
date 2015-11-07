@@ -1,7 +1,7 @@
-<h1>Please enter in your credentials</h1>
+<h1>Log In</h1>
 <form ng-submit="loginCtrl.login()">
-  <input ng-model="loginCtrl.username">
-  <input type="password" ng-model="loginCtrl.password">
+  <input ng-model="loginCtrl.username" placeholder="username">
+  <input type="password" ng-model="loginCtrl.password" placeholder="password">
   <input type="submit" ng-click="loginCtrl.login()" value="Login">
   <p>{{loginCtrl.msg}}</p>
 </form>
