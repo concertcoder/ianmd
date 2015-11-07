@@ -2,9 +2,10 @@
 
 angular.module('ianmd', [
   'ngRoute',
-  'ianmd.view1',
-  'ianmd.view2'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+  'ianmd.constants',
+  'ianmd.core.router.config',
+  'ianmd.core.user.service',
+  'ianmd.components.headerMenu',
+  'ianmd.sections.home',
+  'ianmd.sections.login'
+]);
