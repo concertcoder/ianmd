@@ -1,7 +1,25 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 3)
+  .constant('kAppVersion', 4)
+  .constant('kFacilities', {
+    'st.marys': {
+      street: '18 King Street West',
+      city: 'Toronto',
+      state: 'Ontario',
+      postal: 'M7D 9C9',
+      phone: '416-343-3244',
+      name: 'St. Mary\'s'
+    },
+    'st.johns': {
+      street: '18 King Street West',
+      city: 'Toronto',
+      state: 'Ontario',
+      postal: 'M7D 9C9',
+      phone: '416-343-3244',
+      name: 'St. John\'s'
+    }
+  })
   .constant('kUserTypes', {
     'PSW': 'Personal Support Worker',
     'FAMILY_CAREGIVER': 'Family Caregiver',

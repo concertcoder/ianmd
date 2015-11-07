@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.core.user.service', [])
-  .factory('userService', function(kUserTypes, $localStorage, kAppVersion){
+  .factory('userService', function(kUserTypes, $localStorage, kAppVersion, kFacilities){
     var currentUserId = null;
     var users = {}
 
@@ -12,6 +12,7 @@ angular.module('ianmd.core.user.service', [])
           firstname: 'Chris',
           lastname: 'Gosselin',
           password: 'tester',
+          facility: kFacilities['st.marys'],
           patients: ['mark.dunn', 'james.smith'],
           type: kUserTypes.PSW
         },
@@ -20,6 +21,7 @@ angular.module('ianmd.core.user.service', [])
           firstname: 'Tammy',
           lastname: 'Le',
           password: 'tester',
+          facility: kFacilities['st.johns'],
           patients: ['mark.dunn', 'james.smith'],
           type: kUserTypes.PSW
         },
