@@ -92,6 +92,19 @@ body {
   background: #eaeaea;
 }
 
+body a {
+  color: #5783C4;
+}
+
+body a:hover {
+  color: #5783C4;
+  border-bottom: 1px solid #5783C4;
+}
+
+.blue {
+  color: #5783C4;
+}
+
 /* BUTTONS */
 
 .button {
@@ -193,6 +206,8 @@ table thead tr th {
   letter-spacing: 1px;
   font-size: 12px;
   font-weight: 600;
+  color: #5783C4;
+  border-bottom: 2px solid #5783C4;
 }
 
 tr {
@@ -207,6 +222,10 @@ tr:hover {
 table tbody tr td, table tr td {
   font-size: 16px;
   color: #222;
+}
+
+table tr:nth-of-type(even){
+  background: #f2f2f2;
 }
 
 table tr:nth-of-type(even):hover {
