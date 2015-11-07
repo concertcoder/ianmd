@@ -3,14 +3,14 @@
 angular.module('ianmd.core.router.config', ['ngRoute'])
   .config(
     function routerConfig($routeProvider) {
-      $routeProvider.when('/view1', {
-        templateUrl: 'sections/view1/view1.html',
-        controller: 'View1Ctrl'
+      $routeProvider.when('/login', {
+        templateUrl: 'sections/login/login.html',
+        controller: 'LoginCtrl as loginCtrl'
       });
-      $routeProvider.when('/view2', {
-        templateUrl: 'sections/view2/view2.html',
-        controller: 'View2Ctrl'
+      $routeProvider.when('/home', {
+        templateUrl: 'sections/home/home.html',
+        controller: 'HomeCtrl as homeCtrl'
       });
-      $routeProvider.otherwise({redirectTo: '/view1'});
+      $routeProvider.otherwise({redirectTo: '/login'});
     }
   );
