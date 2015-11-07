@@ -176,6 +176,24 @@ table thead tr th {
   font-weight: 600;
 }
 
+tr {
+  background: #f7f7f7;
+  height: 50px;
+}
+
+tr:hover {
+  background: #eaeaea;
+}
+
+table tbody tr td, table tr td {
+  font-size: 16px;
+  color: #222;
+}
+
+table tr:nth-of-type(even):hover {
+  background: #eaeaea;
+}
+
 .patientTable {
   width: 100%;
 }
