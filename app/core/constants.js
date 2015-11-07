@@ -16,21 +16,25 @@ angular.module('ianmd.constants', [])
     'firstname': {
       id: 'firstname',
       display: 'First Name',
+      editable: true,
       value: ''
     },
     'lastname': {
       id: 'lastname',
       display: 'Last Name',
+      editable: true,
       value: ''
     },
     'occupation': {
       id: 'occupation',
       display: 'Previous or Current Occupation',
+      editable: true,
       value: ''
     },
     'birthplace': {
       id: 'birthplace',
       display: 'Birth Place',
+      editable: true,
       value: ''
     }
   });

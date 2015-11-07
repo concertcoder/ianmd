@@ -22,8 +22,22 @@ angular.module('ianmd.components.patientDataForm', [])
       $location.path('/home');
     };
 
+    vm.goBack = function vmGoback(){
+      $location.path('/home');
+    };
+
     vm.patientChange = function vmPatientChange(setPatient){
       vm.currentPatient = setPatient
+    };
+
+    vm.getEditableProps = function getEditableProps(props){
+      var result = {};
+      angular.forEach(props, function(value, key) {
+          if (!!value.editable) {
+              result[key] = value;
+          }
+      });
+      return result;
     };
   })(this);
 });
