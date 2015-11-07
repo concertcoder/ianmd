@@ -17,7 +17,7 @@ angular.module('ianmd.core.user.service', [])
         firstname: 'Tammy',
         lastname: 'Le',
         password: 'tester',
-        patients: ['mark.dunn'],
+        patients: ['mark.dunn', 'james.smith'],
         type: kUserTypes.PSW
       },
     }
