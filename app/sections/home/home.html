@@ -1,8 +1,15 @@
 <header-menu></header-menu>
 <div class="section">
   <div class="row">
-    <div class="large-12 columns">
+    <div class="large-9 columns">
     <patients></patients>
+    </div>
+    <div class="large-3 columns">
+    <h4><i class="fa fa-building-o"></i> Facility</h4>
+      {{homeCtrl.user.facility.name}}
+      <br>{{homeCtrl.user.facility.street}}
+      <br>{{homeCtrl.user.facility.city}}, {{homeCtrl.user.facility.state}}
+      <br>{{homeCtrl.user.facility.postal}}
     </div>
   </div>
 </div>
