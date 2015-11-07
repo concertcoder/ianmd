@@ -1,23 +1,24 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 4)
+  .constant('kAppVersion', 8)
   .constant('kFacilities', {
-    'st.marys': {
-      street: '18 King Street West',
-      city: 'Toronto',
+    '5193366551': {
+      id: '5193366551',
+      street: '229 Wellington St',
+      city: 'Sarnia',
       state: 'Ontario',
-      postal: 'M7D 9C9',
-      phone: '416-343-3244',
-      name: 'St. Mary\'s'
+      postal: 'N7T 1G9',
+      phone: '(519) 336-6551',
+      name: 'Vision Nursing Home'
     },
-    'st.johns': {
-      street: '18 King Street West',
+    '4163433244': {
+      street: '25 Brunswick Ave',
       city: 'Toronto',
       state: 'Ontario',
-      postal: 'M7D 9C9',
+      postal: 'M5S 2L9',
       phone: '416-343-3244',
-      name: 'St. John\'s'
+      name: 'Kensington Gardens'
     }
   })
   .constant('kUserTypes', {
@@ -30,6 +31,11 @@ angular.module('ianmd.constants', [])
     'id': {
       id: 'id',
       display: 'User Id',
+      value: '',
+    },
+    'facility': {
+      id: 'facility',
+      display: 'Facility',
       value: '',
     },
     'lastUpdated': {

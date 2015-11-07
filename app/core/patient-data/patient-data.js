@@ -11,13 +11,14 @@ angular.module('ianmd.core.patient.data', [])
       patientData['mark.dunn'].firstname.value = 'Mark';
       patientData['mark.dunn'].lastname.value = 'Dunn';
       patientData['mark.dunn'].lastUpdated.value = moment().format('MM/DD/YYYY');
-
+      patientData['mark.dunn'].facility.value = ['5193366551'];
 
       patientData['james.smith'] = R.clone(kPatientInputFields);
       patientData['james.smith'].id.value = 'james.smith';
       patientData['james.smith'].firstname.value = 'James';
       patientData['james.smith'].lastname.value = 'Smith';
       patientData['james.smith'].lastUpdated.value = moment().format('MM/DD/YYYY');
+      patientData['james.smith'].facility.value = ['5193366551'];
 
       $localStorage.patientData = {
         version: kAppVersion,
@@ -51,8 +52,20 @@ angular.module('ianmd.core.patient.data', [])
       $localStorage.patientData.currentPatientId = currentPatientId;
     }
 
+    function getPatientDataByFacility(facilityId) {
+      var results = {};
+
+      angular.forEach(patientData, function(patient, key) {
+          if (patient.facility.value.indexOf(facilityId) !== -1) {
+            results[key] = patient;
+          }
+      });
+      return results;
+    }
+
     return {
       getPatientDataById: getPatientDataById,
+      getPatientDataByFacility: getPatientDataByFacility,
       savePatientData: savePatientData,
       getCurrentPatient: getCurrentPatient,
       setCurrentPatient: setCurrentPatient

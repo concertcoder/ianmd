@@ -12,8 +12,7 @@ angular.module('ianmd.core.user.service', [])
           firstname: 'Chris',
           lastname: 'Gosselin',
           password: 'tester',
-          facility: kFacilities['st.marys'],
-          patients: ['mark.dunn', 'james.smith'],
+          facility: '5193366551',
           type: kUserTypes.PSW
         },
         'tammy.le': {
@@ -21,8 +20,7 @@ angular.module('ianmd.core.user.service', [])
           firstname: 'Tammy',
           lastname: 'Le',
           password: 'tester',
-          facility: kFacilities['st.johns'],
-          patients: ['mark.dunn', 'james.smith'],
+          facility: '5193366551',
           type: kUserTypes.PSW
         },
       };

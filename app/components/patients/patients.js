@@ -15,12 +15,8 @@ angular.module('ianmd.components.patients', [])
 )
 .controller('PatientsCtrl', function(userService, patientData, $location) {
   (function (vm) {
-    var patientsLookup = userService.getUser().patients;
-    vm.patients = {};
-
-    R.forEach(function(id){
-      vm.patients[id] =  patientData.getPatientDataById(id);
-    }, patientsLookup);
+    var facility = userService.getUser().facility;
+    vm.patients = patientData.getPatientDataByFacility(facility);
 
     vm.goToPatient = function vmGoToPatient(setPatient){
       patientData.setCurrentPatient(setPatient);
