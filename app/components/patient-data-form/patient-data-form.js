@@ -15,11 +15,12 @@ angular.module('ianmd.components.patientDataForm', [])
 )
 .controller('PatientDataFormCtrl', function(userService, kPatientInputFields, patientData, $location) {
   (function (vm) {
+    vm.inEditMode = false;
     vm.currentPatient = patientData.getCurrentPatient();
 
     vm.save = function vmSave(){
       patientData.savePatientData(vm.currentPatient);
-      $location.path('/home');
+      vm.switchMode();
     };
 
     vm.goBack = function vmGoback(){
@@ -39,5 +40,9 @@ angular.module('ianmd.components.patientDataForm', [])
       });
       return result;
     };
+
+    vm.switchMode = function vmSwitchMode(){
+      vm.inEditMode = !vm.inEditMode;
+    }
   })(this);
 });

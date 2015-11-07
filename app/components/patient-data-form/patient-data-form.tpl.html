@@ -1,11 +1,12 @@
 <div>
-  <h3>{{formCtrl.currentPatient.firstname.value}} {{formCtrl.currentPatient.lastname.value}}</h3>
+  <h3>{{formCtrl.currentPatient.firstname.value}} {{formCtrl.currentPatient.lastname.value}}'s Profle</h3>
+  <input type="button" value="{{formCtrl.inEditMode ? 'view' : 'edit'}}" ng-click="formCtrl.switchMode()">
   <form>
     <div ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
       <p>{{field.display}}</p>
-      <input type="text" ng-model="field.value">
+      <input type="text" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
     </div>
-    <input type="button" value="Save" ng-click="formCtrl.save()">
+    <input ng-show="formCtrl.inEditMode" type="button" value="Save" ng-click="formCtrl.save()">
     <input type="button" value="Back" ng-click="formCtrl.goBack()">
   </form>
 </div>
