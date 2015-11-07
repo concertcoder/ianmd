@@ -1,10 +1,9 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "ianmd",
+  "description": "Dementiahack 2015",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
-  "license": "MIT",
-  "private": true,
+  "homepage": "https://github.com/concertcoder/ianmd",
+  "private": false,
   "dependencies": {
     "angular": "~1.4.0",
     "angular-route": "~1.4.0",
