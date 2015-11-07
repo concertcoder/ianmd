@@ -1,12 +1,8 @@
 'use strict';
 
-angular.module('ianmd.sections.home', ['ianmd.core.user.service'])
-.controller('HomeCtrl', function(userService, $location) {
+angular.module('ianmd.sections.home', [])
+.controller('HomeCtrl', function() {
   (function (vm) {
-    vm.user = userService.getUser();
-    vm.logout = function() {
-      userService.logout();
-      $location.path('/login');
-    };
+
   })(this);
 });

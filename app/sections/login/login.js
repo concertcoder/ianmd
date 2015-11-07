@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ianmd.sections.login', ['ianmd.core.user.service'])
+angular.module('ianmd.sections.login', [])
 
 .controller('LoginCtrl', function(userService, $location) {
   (function (vm) {
