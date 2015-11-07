@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 1)
+  .constant('kAppVersion', 3)
   .constant('kUserTypes', {
     'PSW': 'Personal Support Worker',
     'FAMILY_CAREGIVER': 'Family Caregiver',
@@ -13,6 +13,11 @@ angular.module('ianmd.constants', [])
       id: 'id',
       display: 'User Id',
       value: '',
+    },
+    'lastUpdated': {
+      id: 'lastUpdated',
+      display: 'Last Updated',
+      value: ''
     },
     'firstname': {
       id: 'firstname',

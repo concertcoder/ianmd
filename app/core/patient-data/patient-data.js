@@ -10,11 +10,14 @@ angular.module('ianmd.core.patient.data', [])
       patientData['mark.dunn'].id.value = 'mark.dunn';
       patientData['mark.dunn'].firstname.value = 'Mark';
       patientData['mark.dunn'].lastname.value = 'Dunn';
+      patientData['mark.dunn'].lastUpdated.value = moment().format('MM/DD/YYYY');
+
 
       patientData['james.smith'] = R.clone(kPatientInputFields);
       patientData['james.smith'].id.value = 'james.smith';
       patientData['james.smith'].firstname.value = 'James';
       patientData['james.smith'].lastname.value = 'Smith';
+      patientData['james.smith'].lastUpdated.value = moment().format('MM/DD/YYYY');
 
       $localStorage.patientData = {
         version: kAppVersion,
@@ -28,6 +31,7 @@ angular.module('ianmd.core.patient.data', [])
 
     function savePatientData(patient) {
       patientData[patient.id.value] = patient;
+      patientData[patient.id.value].lastUpdated.value = moment().format('MM/DD/YYYY');
       return true;
     }
 
