@@ -6,11 +6,15 @@ angular.module('ianmd.core.user.service', [])
     var users = {
       'chris.gosselin': {
         username: 'chris.gosselin',
+        firstname: 'Chris',
+        lastname: 'Gosselin',
         password: 'tester',
         type: 'caregiver'
       },
       'tammy.le': {
         username: 'tammy.le',
+        firstname: 'Tammy',
+        lastname: 'Le',
         password: 'tester',
         type: 'family'
       },
