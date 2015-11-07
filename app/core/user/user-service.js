@@ -9,6 +9,7 @@ angular.module('ianmd.core.user.service', [])
         firstname: 'Chris',
         lastname: 'Gosselin',
         password: 'tester',
+        patients: ['mark.dunn', 'james.smith'],
         type: kUserTypes.PSW
       },
       'tammy.le': {
@@ -16,6 +17,7 @@ angular.module('ianmd.core.user.service', [])
         firstname: 'Tammy',
         lastname: 'Le',
         password: 'tester',
+        patients: ['mark.dunn'],
         type: kUserTypes.PSW
       },
     }

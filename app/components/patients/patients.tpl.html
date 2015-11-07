@@ -1,0 +1,6 @@
+<div>
+  <h3>Patients under your care:</h3>
+  <div ng-repeat="(patientId, patient) in patientsCtrl.patients">
+    <a ng-click="patientsCtrl.goToPatient(patient)">{{patient.firstname.value}} {{patient.lastname.value}}</a>
+  </div>
+</div>
