@@ -304,3 +304,26 @@ ul li a:hover {
 .circle {
   border-radius: 50%;
 }
+
+.tabs .tab-title>a {
+  display: block;
+  background-color: #f8f8f8;
+  color: #558BED;
+  font-size: 1rem;
+  padding: 7px 15px;
+  font-size: 12px;
+  background: transparent;
+}
+
+.tabs .tab-title>a {
+  background: transparent;
+}
+
+.tabs .tab-title.active>a {
+  background: transparent;
+  color: #558BED;
+}
+
+.tabs a:hover {
+  border: 0;
+}
