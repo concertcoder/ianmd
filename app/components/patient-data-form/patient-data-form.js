@@ -77,9 +77,9 @@ angular.module('ianmd.components.patientDataForm', [])
     
     vm.getTitleFromFilter = function vmGetTitleFromFilter(filter){
       var filterToTitle = {
-        'Needs': 'Daily Care',
-        'Preferences': 'Preferences',
-        'Personhood': 'Personhood'
+        'Needs': 'Preferences',
+        'Preferences': 'Interests',
+        'Personhood': 'Story'
       };
       
       return filterToTitle[filter];
