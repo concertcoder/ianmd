@@ -9,7 +9,7 @@ angular.module('ianmd.core.patient.data', [])
     if (!$localStorage.patientData || $localStorage.patientData.version !== kAppVersion) {
       patientData['sana.marina'] =  R.clone(kPatientInputFields);
       patientData['sana.marina'].id.value = 'sana.marina';
-      patientData['sana.marina'].roomnum.value = '31A';
+      patientData['sana.marina'].roomnum.value = '1A';
       patientData['sana.marina'].ohip.value = "2343-222-999 KP";
       patientData['sana.marina'].facility.value = ['5193366551'];
       patientData['sana.marina'].lastUpdated.value = 1446950735;
@@ -87,7 +87,7 @@ angular.module('ianmd.core.patient.data', [])
 
        patientData['vicki.chan'] =  R.clone(kPatientInputFields);
        patientData['vicki.chan'].id.value = 'vicki.chan';
-       patientData['vicki.chan'].roomnum.value = '5B';
+       patientData['vicki.chan'].roomnum.value = '2B';
        patientData['vicki.chan'].ohip.value = '3434-777-888 KP';
        patientData['vicki.chan'].facility.value = ['5193366551', '4162223211'];
        patientData['vicki.chan'].lastUpdated.value = 1446951031;
@@ -166,11 +166,11 @@ angular.module('ianmd.core.patient.data', [])
        patientData['vicki.chan'].leisurenew.value = 4;
        patientData['vicki.chan'].profilepic.value = 'assets/images/vicki_chan.jpg';
        patientData['vicki.chan'].clothing.value = [{
-          src: 'http://www.google.ca/imgres?imgurl=http://bmodish.com/wp-content/uploads/2013/03/Casual-Fall-outfits.jpg&imgrefurl=http://bmodish.com/23-stylish-outfit-that-are-perfect-for-early-fall-outfits&h=481&w=550&tbnid=XmbzF0fG4gQJsM:&docid=7IDnqU_Dp37ilM&ei=v5w-VqGzOIrQetzHnYgC&tbm=isch&ved=0CDcQMygGMAZqFQoTCOGOvprO_8gCFQqoHgod3GMHIQ',
+          src: 'http://bmodish.com/wp-content/uploads/2013/03/Casual-Fall-outfits.jpg',
           description: 'Simple and comfortable'
       }];
       patientData['vicki.chan'].haircut.value = [{
-        src: 'http://www.google.ca/imgres?imgurl=http://i630.photobucket.com/albums/uu26/dramabeans/drama/2010/gumiho16/gumiho16-00150.jpg&imgrefurl=http://www.dramabeans.com/2010/09/my-girfriend-is-a-gumiho-episode-16-final/&h=450&w=800&tbnid=d70dzYZndfGY5M:&docid=G8-uVH_ed6y86M&ei=GJ4-VrzABMutePSyitAP&tbm=isch&ved=0CB4QMygDMANqFQoTCLysy77P_8gCFcsWHgoddJkC-g',
+        src: 'http://i630.photobucket.com/albums/uu26/dramabeans/drama/2010/gumiho16/gumiho16-00150.jpg',
         description: 'Short and easy to clean'
       }];
 
@@ -181,7 +181,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['mark.dunn'].lastUpdated.value = moment().unix();
       patientData['mark.dunn'].facility.value = ['5193366551'];
       patientData['mark.dunn'].ohip.value = '2857-124-317 KP';
-      patientData['mark.dunn'].roomnum.value = '10A';
+      patientData['mark.dunn'].roomnum.value = '3A';
       patientData['mark.dunn'].gender.value = 'Her';
       patientData['mark.dunn'].profilepic.value = 'assets/images/mark_dunn.jpg';
 
@@ -192,7 +192,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['james.smith'].lastUpdated.value = moment().unix();
       patientData['james.smith'].facility.value = ['5193366551'];
       patientData['james.smith'].ohip.value = '2837-124-117 KP';
-      patientData['james.smith'].roomnum.value = '14A';
+      patientData['james.smith'].roomnum.value = '4A';
       patientData['james.smith'].gender.value = 'Him';
       patientData['james.smith'].profilepic.value = 'assets/images/james_smith.jpg';
       
@@ -203,7 +203,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['alex.writer'].lastUpdated.value = moment().unix();
       patientData['alex.writer'].facility.value = ['5193366551'];
       patientData['alex.writer'].ohip.value = '4444-124-117 KP';
-      patientData['alex.writer'].roomnum.value = '11C';
+      patientData['alex.writer'].roomnum.value = '5C';
       patientData['alex.writer'].gender.value = 'Male';
       patientData['alex.writer'].profilepic.value = 'assets/images/alex_writer.jpg';
       
@@ -214,7 +214,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['danielle.hoffman'].lastUpdated.value = moment().unix();
       patientData['danielle.hoffman'].facility.value = ['5193366551'];
       patientData['danielle.hoffman'].ohip.value = '2837-333-117 KP';
-      patientData['danielle.hoffman'].roomnum.value = '14C';
+      patientData['danielle.hoffman'].roomnum.value = '6C';
       patientData['danielle.hoffman'].profilepic.value = 'assets/images/danielle_hoffman.jpg';
       
       patientData['sarah.bedrock'] = R.clone(kPatientInputFields);
@@ -224,7 +224,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['sarah.bedrock'].lastUpdated.value = moment().unix();
       patientData['sarah.bedrock'].facility.value = ['5193366551'];
       patientData['sarah.bedrock'].ohip.value = '2837-124-222 KP';
-      patientData['sarah.bedrock'].roomnum.value = '9A';
+      patientData['sarah.bedrock'].roomnum.value = '7A';
       patientData['sarah.bedrock'].profilepic.value = 'assets/images/sarah_bedrock.jpg';
       
       patientData['tammy.chen'] = R.clone(kPatientInputFields);
@@ -234,7 +234,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['tammy.chen'].lastUpdated.value = moment().unix();
       patientData['tammy.chen'].facility.value = ['5193366551'];
       patientData['tammy.chen'].ohip.value = '9999-124-117 KP';
-      patientData['tammy.chen'].roomnum.value = '7B';
+      patientData['tammy.chen'].roomnum.value = '8B';
       patientData['tammy.chen'].profilepic.value = 'assets/images/tammy_chen.jpg';
       
       patientData['chris.gregory'] = R.clone(kPatientInputFields);
@@ -244,7 +244,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['chris.gregory'].lastUpdated.value = moment().unix();
       patientData['chris.gregory'].facility.value = ['5193366551'];
       patientData['chris.gregory'].ohip.value = '2837-999-117 KP';
-      patientData['chris.gregory'].roomnum.value = '30C';
+      patientData['chris.gregory'].roomnum.value = '9C';
       patientData['chris.gregory'].gender.value = 'Male';
       patientData['chris.gregory'].profilepic.value = 'assets/images/chris_gregory.jpg';
       
@@ -255,7 +255,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['james.red'].lastUpdated.value = moment().unix();
       patientData['james.red'].facility.value = ['5193366551'];
       patientData['james.red'].ohip.value = '2837-124-999 KP';
-      patientData['james.red'].roomnum.value = '2C';
+      patientData['james.red'].roomnum.value = '10C';
       patientData['james.red'].gender.value = 'Male';
       patientData['james.red'].profilepic.value = 'assets/images/james_red.jpg';
 
@@ -266,7 +266,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['red.green'].lastUpdated.value = moment().unix();
       patientData['red.green'].facility.value = ['5193366551'];
       patientData['red.green'].ohip.value = '2837-124-999 KP';
-      patientData['red.green'].roomnum.value = '5C';
+      patientData['red.green'].roomnum.value = '11C';
       patientData['red.green'].gender.value = 'Male';
       patientData['red.green'].profilepic.value = 'assets/images/red_green.jpg';
 
@@ -277,7 +277,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['alicia.eiren'].lastUpdated.value = moment().unix();
       patientData['alicia.eiren'].facility.value = ['5193366551'];
       patientData['alicia.eiren'].ohip.value = '2837-124-999 KP';
-      patientData['alicia.eiren'].roomnum.value = '3A';
+      patientData['alicia.eiren'].roomnum.value = '12A';
       patientData['alicia.eiren'].profilepic.value = 'assets/images/alicia_eiren.jpg';
 
       $localStorage.patientData = {
