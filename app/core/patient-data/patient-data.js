@@ -84,6 +84,24 @@ angular.module('ianmd.core.patient.data', [])
       patientData['james.red'].ohip.value = '2837-124-999 KP';
       patientData['james.red'].roomnum.value = '2A';
 
+      patientData['red.green'] = R.clone(kPatientInputFields);
+      patientData['red.green'].id.value = 'red.green';
+      patientData['red.green'].firstname.value = 'Red';
+      patientData['red.green'].lastname.value = 'Green';
+      patientData['red.green'].lastUpdated.value = moment().unix();
+      patientData['red.green'].facility.value = ['5193366551'];
+      patientData['red.green'].ohip.value = '2837-124-999 KP';
+      patientData['red.green'].roomnum.value = '2A';
+
+      patientData['alicia.eiren'] = R.clone(kPatientInputFields);
+      patientData['alicia.eiren'].id.value = 'alicia.eiren';
+      patientData['alicia.eiren'].firstname.value = 'Alicia';
+      patientData['alicia.eiren'].lastname.value = 'Eiren';
+      patientData['alicia.eiren'].lastUpdated.value = moment().unix();
+      patientData['alicia.eiren'].facility.value = ['5193366551'];
+      patientData['alicia.eiren'].ohip.value = '2837-124-999 KP';
+      patientData['alicia.eiren'].roomnum.value = '2A';
+
       $localStorage.patientData = {
         version: kAppVersion,
         data: patientData,
