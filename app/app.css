@@ -82,17 +82,22 @@
     src: url(assets/fonts/brandonText-medium.ttf);
 }
 
+.brandon {
+  font-family: 'brandonText-regular', sans-serif;
+}
+
 .medium {
+  font-family: brandonText-medium;
   font-weight: 600;
 }
 
 .light {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
   font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
   color: #444;
 }
 
@@ -103,7 +108,6 @@ h4 {
 body {
   font-family: 'Lora', serif;
   color: #222;
-  background: #eaeaea;
 }
 
 body a {
@@ -132,7 +136,7 @@ body a:hover {
   color: #fff;
   box-shadow: 0;
   border: 1px solid #fff;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1px;
@@ -176,28 +180,29 @@ input:not([type]), input:not([password]) {
   border-radius: 5px;
   font-size: 24px;
   border-left: 5px solid #5783C4;
+  font-family: 'brandonText-light', sans-serif;
 }
 
 ::-webkit-input-placeholder {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-light', sans-serif;
   color: #939598;
   font-size: 24px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-light', sans-serif;
   color: #939598;
   font-size: 18px;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-light', sans-serif;
   color: #939598;
   font-size: 18px;
 }
 
 :-ms-input-placeholder {  
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-light', sans-serif;
   color: #939598;
   font-size: 18px;
 }
@@ -238,7 +243,7 @@ table {
 }
 
 table thead tr th {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 12px;
@@ -248,7 +253,6 @@ table thead tr th {
 }
 
 tr {
-  background: #f7f7f7;
   height: 50px;
 }
 
@@ -262,7 +266,7 @@ table tbody tr td, table tr td {
 }
 
 table tr:nth-of-type(even){
-  background: #f2f2f2;
+  background: #f7f7f7;
 }
 
 table tr:nth-of-type(even):hover {
@@ -279,7 +283,7 @@ table tr:nth-of-type(even):hover {
 
 .helloUser {
   color: #fff;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
 }
 
 /* NAVIGATION */
@@ -287,7 +291,7 @@ table tr:nth-of-type(even):hover {
   list-style-type: none;
   margin-top: 20px;
   padding: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
 }
 
 .topNav li {
@@ -300,7 +304,7 @@ ul li a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
 }
 
 ul li a:hover {
@@ -316,7 +320,7 @@ ul li a:hover {
 .side-nav li a:not(.button) {
   background: #5783C4;
   color: #fff;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
   font-size: 16px;
   text-transform: none;
   letter-spacing: none;
@@ -382,7 +386,7 @@ ul li a:hover {
   border: 0;
   color: #C69017;
   background: #FCEDAE;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
 }
 
 .profileSection {
@@ -408,7 +412,7 @@ ul li a:hover {
 .edit {
   padding-top: 7px;
   font-size: 14px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'brandonText-regular', sans-serif;
 }
 
 .patientTable img {

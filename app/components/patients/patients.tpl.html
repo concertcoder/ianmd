@@ -24,7 +24,7 @@
     <div class="row" ng-repeat="patientRow in patientsCtrl.getInRowOf(4, patientsCtrl.patients)">
       <div class="large-3 columns" ng-repeat="patient in patientRow" ng-click="patientsCtrl.goToPatient(patient)">
         <img ng-src="{{patient.profilepic.value}}" class="circle">
-        <div class="text-center"><span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]"><i class="fa fa-bell yellow"></i></span> {{patient.lastname.value}}, {{patient.firstname.value}}
+        <div class="text-center"><span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]"><i class="fa fa-bell yellow"></i></span> <span class="medium">{{patient.lastname.value}}, {{patient.firstname.value}}</span>
         <br>Rm {{patient.roomnum.value}}</div>
         <div class="break"></div>
       </div>

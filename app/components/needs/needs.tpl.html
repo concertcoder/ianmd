@@ -1,7 +1,7 @@
 <div>
   <div class="row">
     <div class="large-12 columns">
-  <h4 class="light">Food &amp; Drink</h4>
+  <h5 class="light">Food &amp; Drink</h5>
     </div>
   </div>
   
@@ -36,14 +36,42 @@
     </tbody>
   </table>
   
-  <ul class="tastePrefs" ng-if="ctrl.patient.saltyFood.value">
+  <ul class="tastePrefs">
     <li><span ng-if="ctrl.patient.saltyFood.value">{{ctrl.fromNum(ctrl.patient.saltyFood.value)}} prefers salty food</span></li>
     <li><span ng-if="ctrl.patient.healthyFood.value">{{ctrl.fromNum(ctrl.patient.healthyFood.value)}} health conscious</span></li>
     <li><span ng-if="ctrl.patient.healthyFood.value">Prefers food from {{ctrl.patient.ethnicFoodOrigin.value}} and {{ctrl.patient.ethnicFoodOrigin.value}}</span></li>
   </ul>
   <div class="break"></div>
-  <div class="break"></div>
   
+  <h5>Drink Preferences</h5>
+    <table class="patientTable">
+    <thead>
+      <tr>
+        <th>Drink</th>
+        <th>Time of Day</th>
+        <th>Preparation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="drink in ctrl.patient.drinkPreferences.value">
+        <td>{{drink.drink}}</td>
+        <td>{{drink.timeOfDay}}</td>
+        <td>{{drink.preperation}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="break"></div>
+
+  <h4 class="light">Clothing Preferences</h4>
+  <div class="row">
+    <div ng-repeat="clothing in ctrl.patient.clothing.value" class="large-6 columns">
+      <img src="{{clothing.src}}">
+      <br>{{clothing.description}}
+    </div>
+    </div>
+  
+  <div class="break"></div>
     <h4 class="light">Personal Care Product Preferences</h4>
     <table class="patientTable">
     <thead>
@@ -54,31 +82,31 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span ng-if="ctrl.patient.dentureSolution.value">{{ctrl.patient.dentureSolution.value}}</span></td>
-        <td><span ng-if="ctrl.patient.dentureSolution.value">Denture Solution</span></td>
-        <td><span ng-if="ctrl.patient.dentureSolution.value"></span></td>
+      <tr ng-if="ctrl.patient.dentureSolution.value">
+        <td><span>{{ctrl.patient.dentureSolution.value}}</span></td>
+        <td><span>Denture Solution</span></td>
+        <td><span></span></td>
+      </tr>
+      <tr ng-if="ctrl.patient.shampoo.value">
+        <td><span>{{ctrl.patient.shampoo.value}}</span></td>
+        <td><span>{{ctrl.patient.shampoo.id}}</span></td>
+        <td><span></span></td>
       </tr>
       <tr>
-        <td><span ng-if="ctrl.patient.shampoo.value">{{ctrl.patient.shampoo.value}}</span></td>
-        <td><span ng-if="ctrl.patient.shampoo.value">{{ctrl.patient.shampoo.id}}</span></td>
-        <td><span ng-if="ctrl.patient.shampoo.value"></span></td>
+        <td ng-if="ctrl.patient.hairspray.value"><span>{{ctrl.patient.hairspray.value}}</span></td>
+        <td ng-if="ctrl.patient.hairspray.value"><span>{{ctrl.patient.hairspray.id}}</span></td>
+        <td ng-if="ctrl.patient.hairspray.value"><span></span></td>
       </tr>
-      <tr>
-        <td><span ng-if="ctrl.patient.hairspray.value">{{ctrl.patient.hairspray.value}}</span></td>
-        <td><span ng-if="ctrl.patient.hairspray.value">{{ctrl.patient.hairspray.id}}</span></td>
-        <td><span ng-if="ctrl.patient.hairspray.value"></span></td>
-      </tr>
-      <tr>
-        <td><span ng-if="ctrl.patient.perfume.value">{{ctrl.patient.perfume.value}}</span></td>
-        <td><span ng-if="ctrl.patient.perfume.value">{{ctrl.patient.perfume.id}}</span></td>
-        <td><span ng-if="ctrl.patient.perfume.value"></span></td>
+      <tr ng-if="ctrl.patient.perfume.value">
+        <td><span>{{ctrl.patient.perfume.value}}</span></td>
+        <td><span>{{ctrl.patient.perfume.id}}</span></td>
+        <td><span></span></td>
       </tr>
     </tbody>
   </table>
   
   <div class="break"></div>
-  <h4 class="light">Personal Care Routines</h4>
+  <h5 class="light">Personal Care Routines</h5>
     <table class="patientTable">
     <thead>
       <tr>
@@ -87,9 +115,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span ng-if="ctrl.patient.bathingroutine.value">My bathing routine is</span></td>
-        <td><span ng-if="ctrl.patient.bathingroutine.value">{{ctrl.patient.bathingroutine.value}}</span></td>
+      <tr ng-if="ctrl.patient.bathingroutine.value">
+        <td><span>My bathing routine is</span></td>
+        <td><span>{{ctrl.patient.bathingroutine.value}}</span></td>
       </tr>
     </tbody>
   </table>
