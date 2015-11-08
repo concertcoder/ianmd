@@ -10,14 +10,14 @@ angular.module('ianmd.core.patient.data', [])
       patientData['mark.dunn'].id.value = 'mark.dunn';
       patientData['mark.dunn'].firstname.value = 'Mark';
       patientData['mark.dunn'].lastname.value = 'Dunn';
-      patientData['mark.dunn'].lastUpdated.value = moment().format('MM/DD/YYYY');
+      patientData['mark.dunn'].lastUpdated.value = moment().unix();
       patientData['mark.dunn'].facility.value = ['5193366551'];
 
       patientData['james.smith'] = R.clone(kPatientInputFields);
       patientData['james.smith'].id.value = 'james.smith';
       patientData['james.smith'].firstname.value = 'James';
       patientData['james.smith'].lastname.value = 'Smith';
-      patientData['james.smith'].lastUpdated.value = moment().format('MM/DD/YYYY');
+      patientData['james.smith'].lastUpdated.value = moment().unix();
       patientData['james.smith'].facility.value = ['5193366551'];
 
       $localStorage.patientData = {
@@ -42,7 +42,7 @@ angular.module('ianmd.core.patient.data', [])
     function savePatientData(patient) {
       var currentFieldsClone = R.values(R.clone(patientData[patient.id.value]));
       patientData[patient.id.value] = patient;
-      patientData[patient.id.value].lastUpdated.value = moment().format('MM/DD/YYYY');
+      patientData[patient.id.value].lastUpdated.value = moment().unix();
 
       var changes = R.filter(function(currentField){
         return !R.equals(currentField.value, patientData[patient.id.value][currentField.id].value);

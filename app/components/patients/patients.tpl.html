@@ -12,7 +12,7 @@
       <tr ng-repeat="(patientId, patient) in patientsCtrl.patients" ng-click="patientsCtrl.goToPatient(patient)">
         <td>{{patient.firstname.value}}</td>
         <td>{{patient.lastname.value}}</td>
-        <td>{{patient.lastUpdated.value}}</td>
+        <td>{{patientsCtrl.moment.unix(patient.lastUpdated.value).format('MM/DD/YYYY')}}</td>
       </tr>
     </tbody>
   </table>
