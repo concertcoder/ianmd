@@ -25,13 +25,13 @@
         
           <h4 class="profileTitle">{{formCtrl.getTitleFromFilter(formCtrl.fieldFilter)}} </h4>
         <form>
-          <div ng-show="formCtrl.inEditMode || field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
+          <div ng-if="formCtrl.inEditMode || field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
             <p>{{field.display}} <i ng-if="formCtrl.showChangeBanner && formCtrl.fieldWasChanged(field.id)" tooltip-title="{{formCtrl.getChangeText(field.id)}}" tooltips class="fa fa-info-circle"></i></p>
-            <span ng-show="!formCtrl.inEditMode">{{field.value}}</span>
-            <input ng-show="formCtrl.inEditMode" type="text" ng-if="!field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
-            <select ng-show="formCtrl.inEditMode" type="text" ng-if="field.options" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>
+            <span ng-if="!formCtrl.inEditMode">{{field.value}}</span>
+            <input ng-if="formCtrl.inEditMode && !field.options" type="text" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
+            <select ng-if="formCtrl.inEditMode && field.options" type="text" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>
           </div>
-          <input ng-show="formCtrl.inEditMode" type="button" class="button large right" value="Save" ng-click="formCtrl.save()">
+          <input ng-if="formCtrl.inEditMode" type="button" class="button large right" value="Save" ng-click="formCtrl.save()">
         </form>
     </div>
   </div>
