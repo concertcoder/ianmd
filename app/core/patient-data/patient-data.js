@@ -1,11 +1,17 @@
 'use strict';
 
 angular.module('ianmd.core.patient.data', [])
-  .factory('patientData', function(kPatientInputFields, $localStorage, kAppVersion, userService){
+  .factory('patientData', function(kPatientInputFields, $localStorage, kAppVersion, userService, kSanaMarina, kVickiChan){
     var currentPatientId = null;
     var patientData = {};
 
+    /* This is where we initiatize fake patient data.  This was so tedious */
     if (!$localStorage.patientData || $localStorage.patientData.version !== kAppVersion) {
+      // Started filling things out through the UI then taking it out of local storage and saving it to a constant
+      // less painful but if fields change...
+      patientData['sana.marina'] = kSanaMarina;
+      patientData['vicki.chan'] = kVickiChan;
+
       patientData['mark.dunn'] = R.clone(kPatientInputFields);
       patientData['mark.dunn'].id.value = 'mark.dunn';
       patientData['mark.dunn'].firstname.value = 'Mark';
@@ -87,10 +93,7 @@ angular.module('ianmd.core.patient.data', [])
       // Keep in mind data is stored least recent changes to recent changes, so reverse array if needed
       $localStorage.patientHistory = {
         version: kAppVersion,
-        data: {
-          'mark.dunn': [],
-          'james.smith': []
-        }
+        data: {}
       };
     }
 
@@ -110,6 +113,10 @@ angular.module('ianmd.core.patient.data', [])
         }
         return !R.equals(currentField.value, patientData[patient.id.value][currentField.id].value);
       }, currentFieldsClone);
+
+      if (!$localStorage.patientHistory.data[patient.id.value]) {
+        $localStorage.patientHistory.data[patient.id.value] = [];
+      }
 
       $localStorage.patientHistory.data[patient.id.value].push(R.clone(changes));
       $localStorage.patientData.data[patient.id.value] = R.clone(patientData[patient.id.value]);
