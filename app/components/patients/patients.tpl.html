@@ -18,7 +18,7 @@
     <div class="row" ng-repeat="patientRow in patientsCtrl.getInRowOf(4, patientsCtrl.patients)">
       <div class="large-3 columns" ng-repeat="patient in patientRow" ng-click="patientsCtrl.goToPatient(patient)">
         <img src="http://placehold.it/200x200" class="circle">
-        <div class="text-center">{{patient.lastname.value}}, {{patient.firstname.value}}
+        <div class="text-center"><span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]"><i class="fa fa-bell yellow"></i></span> {{patient.lastname.value}}, {{patient.firstname.value}}
         <br>Rm {{patient.roomnum.value}}</div>
         <div class="break"></div>
       </div>
@@ -28,6 +28,7 @@
       <table class="patientTable">
     <thead>
       <tr>
+        <th width="5"></th>
         <th>Last Name</th>
         <th>First Name</th>
         <th>OHIP #</th>
@@ -37,11 +38,12 @@
     </thead>
     <tbody>
       <tr ng-repeat="(patientId, patient) in patientsCtrl.patients" ng-click="patientsCtrl.goToPatient(patient)">
+        <td><span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]"><i class="fa fa-bell yellow"></i></span></td>
         <td>{{patient.lastname.value}}</td>
         <td>{{patient.firstname.value}}</td>
         <td>{{patient.ohip.value}}</td>
         <td>{{patient.roomnum.value}}</td>
-        <td>{{patientsCtrl.moment.unix(patient.lastUpdated.value).format('MM/DD/YYYY')}}<span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]">*</span></td>
+        <td>{{patientsCtrl.moment.unix(patient.lastUpdated.value).format('MM/DD/YYYY')}}</td>
       </tr>
     </tbody>
   </table>
