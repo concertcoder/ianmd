@@ -49,9 +49,9 @@ angular.module('ianmd.core.patient.data', [])
       patientData['sana.marina'].friendshipbeliefs.value = 7;
       patientData['sana.marina'].friendshipinterests.value = 4;
       patientData['sana.marina'].friendshipemotional.value = 2;
-      patientData['sana.marina'].lifeeventchild.value = 'I lived on a farm, and loved to ride horses.';
-      patientData['sana.marina'].lifeeventyoungadult.value = 'I am married, and had two children.';
-      patientData['sana.marina'].lifeeventadult.value = 'I spent most of my days volunteering at the church and fundraising for charities.';
+      patientData['sana.marina'].lifeeventchild.value = 'I grew up on my parent\'s farm. It wasn\'t an easy childhood, but it taught me the importance of hard work and perseverance in the face of adversity. When I was twelve, my uncle and two cousins were killed in a car accident. Our family\'s strong faith helped us through that loss and, to this day, I feel my church community is a source of strength.';
+      patientData['sana.marina'].lifeeventyoungadult.value = 'When I moved to Winnipeg, I was swept up by the artistic community in my neighbourhood. I became a fan of the opera, and organized trips to the opera house for my church group. I met my husband on one of these trips - he had just moved to Winnipeg from Toronto for work.  We grew close through our shared faith and commitment to volunteering in our community, and were married within a year.  A few years later, we moved to Toronto for my husband\'s work, with our two young children in tow.  Once again my church supported me, as I was far away from my family and friends';
+      patientData['sana.marina'].lifeeventadult.value = 'Once our children had both started school, and we\'d gotten settled into our new home in Toronto, I became even more involved with my church.  I organized church activities, and helped run the soup kitchen and the social justice committee';
       patientData['sana.marina'].lifeeventoldage.value = 'After my husband passed I spent summers at the house with my grandchildren, and winters down in Florida with my sister.';
       patientData['sana.marina'].pastexperienceseducation.value = "High school";
       patientData['sana.marina'].pastexperiencesvolunteering.value = "At the church";
