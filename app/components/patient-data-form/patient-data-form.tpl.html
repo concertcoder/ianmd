@@ -4,9 +4,9 @@
       <img src="http://placehold.it/200x200" class="circle">
       <hr>
       <ul class="side-nav">
-        <li><a href="#">Daily Care</a></li>
-        <li><a href="#">Preferences</a></li>
-        <li><a href="#">Personhood</a></li>
+        <li><a ng-click="formCtrl.fieldFilter = 'Needs'">Daily Care</a></li>
+        <li><a ng-click="formCtrl.fieldFilter = 'Preferences'">Preferences</a></li>
+        <li><a ng-click="formCtrl.fieldFilter = 'Personhood'">Personhood</a></li>
       </ul>
     </div>
     <div class="large-9 columns">
@@ -14,7 +14,7 @@
       <div class="break"></div>
         <div ng-show="formCtrl.showChangeBanner" class="alert-box">A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a></div>
         <form>
-          <div ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
+          <div ng-show="formCtrl.inEditMode || field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
             <p>{{field.display}}</p>
             <input type="text" ng-if="!field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
             <select type="text" ng-if="field.options" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>

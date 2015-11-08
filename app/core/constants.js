@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 25)
+  .constant('kAppVersion', 26)
   .constant('kFacilities', {
     '5193366551': {
       id: '5193366551',
@@ -443,7 +443,7 @@ angular.module('ianmd.constants', [])
       id: 'entertainment',
       display: 'What are your entertainment preferences?',
       editable: true,
-      value: ''
+      value: 'Romantic comedies'
     },
     'friendshipinterests': {
       section: 'Personhood',

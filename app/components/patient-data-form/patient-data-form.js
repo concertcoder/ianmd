@@ -15,6 +15,7 @@ angular.module('ianmd.components.patientDataForm', [])
 )
 .controller('PatientDataFormCtrl', function(userService, kPatientInputFields, patientData, $location) {
   (function (vm) {
+    vm.fieldFilter = 'Needs';
     vm.showChangeBanner = false;
     /*
     vm.outputFoods = [];
@@ -54,7 +55,7 @@ angular.module('ianmd.components.patientDataForm', [])
     vm.getEditableProps = function getEditableProps(props){
       var result = {};
       angular.forEach(props, function(value, key) {
-          if (!!value.editable) {
+          if (!!value.editable && value.section === vm.fieldFilter) {
               result[key] = value;
           }
       });
