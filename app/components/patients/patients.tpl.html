@@ -14,6 +14,12 @@
   </div>
   
 <div class="tabs-content">
+  <div class="row">
+    <div class="break"></div>
+      <div ng-show="patientsCtrl.changeCount" class="alert-box radius">
+        <i class="fa fa-bell"></i>&nbsp; Information about {{patientsCtrl.getChangeText()}} in your care was updated since you last checked in<a ng-click="patientsCtrl.removeAlert()" class="close">&times;</a>
+      </div>
+  </div>
   <div ng-if="!patientsCtrl.listView">
     <div class="row" ng-repeat="patientRow in patientsCtrl.getInRowOf(4, patientsCtrl.patients)">
       <div class="large-3 columns" ng-repeat="patient in patientRow" ng-click="patientsCtrl.goToPatient(patient)">

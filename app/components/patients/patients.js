@@ -35,6 +35,7 @@ angular.module('ianmd.components.patients', [])
     };
 
     vm.user = userService.getUser();
+    vm.changeCount = R.keys(vm.user.unseenChangesForUsers).length;
     var facility = vm.user.facility;
     vm.moment = moment;
     vm.patients = patientData.getPatientDataByFacility(facility);
@@ -93,5 +94,15 @@ angular.module('ianmd.components.patients', [])
       }, popovers);
       vm.popoverOn = !vm.popoverOn;
     };
+
+    vm.getChangeText = function getChangeText(){
+      return vm.changeCount === 1 ? 'a resident' : vm.changeCount + ' residents';
+    };
+
+    vm.removeAlert = function(){
+      userService.removeAllUnseenChanges();
+      vm.changeCount = 0;
+    }
+
   })(this);
 });

@@ -79,11 +79,17 @@ angular.module('ianmd.core.user.service', [])
       $localStorage.userData.data = users;
     }
 
+    function removeAllUnseenChanges(){
+      getUser().unseenChangesForUsers = {};
+      $localStorage.userData.data = users;
+    }
+
     return {
       login: login,
       getUser: getUser,
       logout: logout,
       setUnseenChangeForPatientId: setUnseenChangeForPatientId,
-      removeUnseenChangeForPatientId: removeUnseenChangeForPatientId
+      removeUnseenChangeForPatientId: removeUnseenChangeForPatientId,
+      removeAllUnseenChanges: removeAllUnseenChanges
     };
   });
