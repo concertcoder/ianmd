@@ -161,7 +161,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['mark.dunn'].facility.value = ['5193366551'];
       patientData['mark.dunn'].ohip.value = '2857-124-317 KP';
       patientData['mark.dunn'].roomnum.value = '10A';
-      patientData['mark.dunn'].gender.value = 'Male';
+      patientData['mark.dunn'].gender.value = 'Her';
       patientData['mark.dunn'].profilepic.value = 'assets/images/mark_dunn.jpg';
 
       patientData['james.smith'] = R.clone(kPatientInputFields);
@@ -172,7 +172,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['james.smith'].facility.value = ['5193366551'];
       patientData['james.smith'].ohip.value = '2837-124-117 KP';
       patientData['james.smith'].roomnum.value = '14A';
-      patientData['james.smith'].gender.value = 'Male';
+      patientData['james.smith'].gender.value = 'Him';
       patientData['james.smith'].profilepic.value = 'assets/images/james_smith.jpg';
       
       patientData['alex.writer'] = R.clone(kPatientInputFields);
