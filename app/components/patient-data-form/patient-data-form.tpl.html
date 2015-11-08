@@ -12,6 +12,7 @@
   </div>
   <div class="row">
     <div class="large-12 columns">
+    <div ng-show="formCtrl.showChangeBanner" class="alert-box">A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a></div>
     <form>
       <div ng-show="formCtrl.inEditMode || field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
         <p>{{field.display}}</p>

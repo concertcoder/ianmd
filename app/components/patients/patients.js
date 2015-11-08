@@ -21,7 +21,6 @@ angular.module('ianmd.components.patients', [])
     vm.patients = patientData.getPatientDataByFacility(facility);
 
     vm.goToPatient = function vmGoToPatient(setPatient){
-      userService.removeUnseenChangeForPatientId(setPatient.id.value);
       patientData.setCurrentPatient(setPatient);
       $location.path('/patient');
     };

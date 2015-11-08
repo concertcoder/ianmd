@@ -15,6 +15,7 @@ angular.module('ianmd.components.patientDataForm', [])
 )
 .controller('PatientDataFormCtrl', function(userService, kPatientInputFields, patientData, $location) {
   (function (vm) {
+    vm.showChangeBanner = false;
     /*
     vm.outputFoods = [];
     vm.foods = [
@@ -27,6 +28,15 @@ angular.module('ianmd.components.patientDataForm', [])
 
     vm.inEditMode = false;
     vm.currentPatient = patientData.getCurrentPatient();
+
+    if (userService.getUser().unseenChangesForUsers[vm.currentPatient.id.value]) {
+      vm.showChangeBanner = true;
+    }
+
+    vm.removeAlert = function vmRemoveAlert(){
+      userService.removeUnseenChangeForPatientId(vm.currentPatient.id.value);
+      vm.showChangeBanner = false;
+    };
 
     vm.save = function vmSave(){
       patientData.savePatientData(vm.currentPatient);
