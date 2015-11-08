@@ -1,3 +1,31 @@
 <div>
-  {{ctrl.patient.gender.value}}  Story
+  <div class="row">
+    <div class="large-7 columns">
+  <h4 class="light">Childhood</h4>
+  <blockquote>
+    <span ng-if="ctrl.patient.lifeeventchild.value">&quot;{{ctrl.patient.lifeeventchild.value}}&quot;</span>
+  </blockquote>
+  
+  <h4 class="light">Young Adulthood</h4>
+  <blockquote>
+    <span ng-if="ctrl.patient.lifeeventyoungadult.value">&quot;{{ctrl.patient.lifeeventyoungadult.value}}&quot;</span>
+  </blockquote>
+  
+  <h4 class="light">Adulthood</h4>
+  <blockquote>
+    <span ng-if="ctrl.patient.lifeeventadult.value">&quot;{{ctrl.patient.lifeeventadult.value}}&quot;</span>
+  </blockquote>
+  </div>
+  <div class="large-5 columns influencesBox">
+    <h4 class="light">{{ctrl.patient.firstname.value}}'s Influences</h4>
+    <p>Factors that {{ctrl.patient.firstname.value}} feels defines her:</p>
+    <ul>
+      <li>Faith</li>
+      <li>Family</li>
+      <li>Friends</li>
+      <li>Hobbies &amp; Volunteering</li>
+    </ul>
+  </div>
+</div>
+<div class="break"></div>
 </div>

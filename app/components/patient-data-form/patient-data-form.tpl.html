@@ -10,13 +10,13 @@
     <div class="large-3 columns sidebar text-center">
       <h4 class="profileTitle">{{formCtrl.currentPatient.firstname.value}} {{formCtrl.currentPatient.lastname.value}} <a value="{{formCtrl.inEditMode ? 'view' : 'edit'}}" ng-click="formCtrl.switchMode()" class="right edit"><i class="fa fa-pencil"></i> Edit</a></h4> 
       <img ng-src="{{formCtrl.currentPatient.profilepic.value}}" class="circle">
-      <br>Rm {{formCtrl.currentPatient.roomnum.value}}
-      <br>Resident since {{formCtrl.currentPatient.residencesince.value}} 
+      <br><br>Resident since <span class="medium">{{formCtrl.currentPatient.residencesince.value}}</span> 
+      <br>Room #{{formCtrl.currentPatient.roomnum.value}}
       <hr>
       <ul class="side-nav">
         <li><a ng-click="formCtrl.fieldFilter = 'Personhood'">{{formCtrl.currentPatient.gender.value}} Story</a></li>
-        <li><a ng-click="formCtrl.fieldFilter = 'Needs'">{{formCtrl.currentPatient.gender.value}} Interests</a></li>
-        <li><a ng-click="formCtrl.fieldFilter = 'Preferences'">{{formCtrl.currentPatient.gender.value}} Preferences</a></li>
+        <li><a ng-click="formCtrl.fieldFilter = 'Needs'">{{formCtrl.currentPatient.gender.value}} Preferences</a></li>
+        <li><a ng-click="formCtrl.fieldFilter = 'Preferences'">{{formCtrl.currentPatient.gender.value}} Interests</a></li>
       </ul>
     </div>
     <div class="large-9 columns profileSection">
@@ -24,7 +24,7 @@
       <div class="break"></div>
 <!--        <div ng-show="formCtrl.showChangeBanner" class="alert-box radius"><i class="fa fa-bell"></i>&nbsp; A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a></div>-->
         
-        <h4 class="profileTitle">{{formCtrl.getTitleFromFilter(formCtrl.fieldFilter)}} </h4>
+        <h4 class="profileTitle">{{formCtrl.currentPatient.gender.value}} {{formCtrl.getTitleFromFilter(formCtrl.fieldFilter)}} </h4>
         <form ng-if="formCtrl.inEditMode">
           <div ng-if="field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
             <p>{{field.display}} <i ng-if="formCtrl.showChangeBanner && formCtrl.fieldWasChanged(field.id)" tooltip-title="{{formCtrl.getChangeText(field.id)}}" tooltips class="fa fa-info-circle"></i></p>
