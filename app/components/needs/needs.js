@@ -16,7 +16,8 @@ angular.module('ianmd.components.needs', [])
     };
   }
 )
-.controller('NeedsCtrl', function() {
+.controller('NeedsCtrl', function(patientData) {
   (function (vm) {
+    vm.fromNum = patientData.getTextFromScaleValue;
   })(this);
 });

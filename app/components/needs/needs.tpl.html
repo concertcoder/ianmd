@@ -1,3 +1,72 @@
 <div>
-  {{ctrl.patient.gender.value}} Preferences
+  <div class="row">
+    <div class="large-12 columns">
+  <h5 class="medium">{{ctrl.patient.hotBreakfast.subcat}} </h5>
+    </div>
+  </div>
+  
+  <table class="patientTable">
+    <thead>
+      <tr>
+        <th>Meal</th>
+        <th>Serving Time</th>
+        <th>Frequency</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Breakfast</td>
+        <td><span nf-if="ctrl.patient.breakfastTime.value">{{ctrl.patient.breakfastTime.value}}</span></td>
+        <td><span nf-if="ctrl.patient.breakfastFreq.value">{{ctrl.patient.breakfastFreq.value}}</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Lunch</td>
+        <td><span nf-if="ctrl.patient.lunchTime.value">{{ctrl.patient.lunchTime.value}}</span></td>
+        <td><span nf-if="ctrl.patient.lunchFreq.value">{{ctrl.patient.lunchFreq.value}}</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Dinner</td>
+        <td><span nf-if="ctrl.patient.dinnerTime.value">{{ctrl.patient.dinnerTime.value}}</span></td>
+        <td><span nf-if="ctrl.patient.dinnerFreq.value">{{ctrl.patient.dinnerFreq.value}}</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <ul class="tastePrefs">
+    <li><span nf-if="ctrl.patient.saltyFood.display">{{ctrl.fromNum(ctrl.patient.saltyFood.value)}}</span></li>
+    <li><span nf-if="ctrl.patient.healthyFood.display">{{ctrl.patient.healthyFood.value}}</span></li>
+    <li><span nf-if="ctrl.patient.healthyFood.display">Prefers food from {{ctrl.patient.ethnicFoodOrigin.value}} and {{ctrl.patient.ethnicFoodOrigin.value}}</span></li>
+  </ul>
+  
+    <h5 class="medium">Personal Care Product Preferences</h5>
+    <table class="patientTable">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Type of Product</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Breakfast</td>
+        <td><span nf-if="ctrl.patient.breakfastTime.value">{{ctrl.patient.breakfastTime.value}}</span></td>
+        <td><span nf-if="ctrl.patient.breakfastFreq.value">{{ctrl.patient.breakfastFreq.value}}</span></td>
+      </tr>
+      <tr>
+        <td>Lunch</td>
+        <td><span nf-if="ctrl.patient.lunchTime.value">{{ctrl.patient.lunchTime.value}}</span></td>
+        <td><span nf-if="ctrl.patient.lunchFreq.value">{{ctrl.patient.lunchFreq.value}}</span></td>
+      </tr>
+      <tr>
+        <td>Dinner</td>
+        <td><span nf-if="ctrl.patient.dinnerTime.value">{{ctrl.patient.dinnerTime.value}}</span></td>
+        <td><span nf-if="ctrl.patient.dinnerFreq.value">{{ctrl.patient.dinnerFreq.value}}</span></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
