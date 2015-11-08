@@ -25,10 +25,7 @@
     <h4 class="light">{{ctrl.patient.firstname.value}}'s Influences</h4>
     <p>Factors that {{ctrl.patient.firstname.value}} feels defines her:</p>
     <ul>
-      <li>Faith</li>
-      <li>Family</li>
-      <li>Friends</li>
-      <li>Hobbies &amp; Volunteering</li>
+      <li ng-repeat="influence in ctrl.getInfluences()">{{influence.workCloudDisplay}}</li>
     </ul>
   </div>
 </div>

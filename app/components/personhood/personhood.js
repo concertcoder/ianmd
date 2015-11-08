@@ -18,5 +18,12 @@ angular.module('ianmd.components.personhood', [])
 )
 .controller('PersonhoodCtrl', function() {
   (function (vm) {
+    vm.getInfluences = function getInfluences(){
+      var aboveMed = R.filter(function(field){
+        return field.workCloudDisplay && field.subcat === 'Personal Values - Factors influencing who I am' && field.value > 4
+      }, R.values(vm.patient));
+
+      return R.reverse(R.sortBy(R.prop('value'), aboveMed));
+    };
   })(this);
 });

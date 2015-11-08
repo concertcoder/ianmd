@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 59)
+  .constant('kAppVersion', 60)
   .constant('kFacilities', {
     '5193366551': {
       id: '5193366551',
@@ -633,6 +633,7 @@ angular.module('ianmd.constants', [])
       id: 'workties',
       display: 'Who I am is strongly tied to my work',
       tableDisplay: 'Defined by Work',
+      workCloudDisplay: 'Work',
       editable: true,
       options: [1,2,3,4,5,6,7],
       value: 4
@@ -643,6 +644,7 @@ angular.module('ianmd.constants', [])
       id: 'familyties',
       display: 'Who I am is strongly tied to my family',
       tableDisplay: 'Defined by Family',
+      workCloudDisplay: 'Family',
       editable: true,
       options: [1,2,3,4,5,6,7],
       value: 4
@@ -653,6 +655,7 @@ angular.module('ianmd.constants', [])
       id: 'friendties',
       display: 'Who I am is strongly tied to my friends and social networks',
       tableDisplay: 'Defined by Friends',
+      workCloudDisplay: 'Friends',
       editable: true,
       options: [1,2,3,4,5,6,7],
       value: 4
@@ -672,6 +675,7 @@ angular.module('ianmd.constants', [])
       id: 'politicalties',
       display: 'Who I am is strongly tied to my political beliefs',
       tableDisplay: 'Defined by Politics',
+      workCloudDisplay: 'Politics',
       editable: true,
       options: [1,2,3,4,5,6,7],
       value: 4
@@ -682,6 +686,7 @@ angular.module('ianmd.constants', [])
       id: 'religiousties',
       display: 'Who I am is strongly tied to my religious beliefs',
       tableDisplay: 'Defined by Faith',
+      workCloudDisplay: 'Faith',
       editable: true,
       options: [1,2,3,4,5,6,7],
       value: 4
