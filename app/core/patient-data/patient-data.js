@@ -23,6 +23,62 @@ angular.module('ianmd.core.patient.data', [])
       patientData['james.smith'].facility.value = ['5193366551'];
       patientData['james.smith'].ohip.value = '2837-124-117 KP';
       patientData['james.smith'].roomnum.value = '14A';
+      
+      patientData['james.smith1'] = R.clone(kPatientInputFields);
+      patientData['james.smith1'].id.value = 'james.smith1';
+      patientData['james.smith1'].firstname.value = 'James';
+      patientData['james.smith1'].lastname.value = 'Smith';
+      patientData['james.smith1'].lastUpdated.value = moment().unix();
+      patientData['james.smith1'].facility.value = ['5193366551'];
+      patientData['james.smith1'].ohip.value = '2837-124-117 KP';
+      patientData['james.smith1'].roomnum.value = '14A';
+      
+      patientData['james.smith2'] = R.clone(kPatientInputFields);
+      patientData['james.smith2'].id.value = 'james.smith2';
+      patientData['james.smith2'].firstname.value = 'James';
+      patientData['james.smith2'].lastname.value = 'Smith';
+      patientData['james.smith2'].lastUpdated.value = moment().unix();
+      patientData['james.smith2'].facility.value = ['5193366551'];
+      patientData['james.smith2'].ohip.value = '2837-124-117 KP';
+      patientData['james.smith2'].roomnum.value = '14A';
+      
+      patientData['james.smith3'] = R.clone(kPatientInputFields);
+      patientData['james.smith3'].id.value = 'james.smith3';
+      patientData['james.smith3'].firstname.value = 'James';
+      patientData['james.smith3'].lastname.value = 'Smith';
+      patientData['james.smith3'].lastUpdated.value = moment().unix();
+      patientData['james.smith3'].facility.value = ['5193366551'];
+      patientData['james.smith3'].ohip.value = '2837-124-117 KP';
+      patientData['james.smith3'].roomnum.value = '14A';
+      
+      patientData['james.smith4'] = R.clone(kPatientInputFields);
+      patientData['james.smith4'].id.value = 'james.smith4';
+      patientData['james.smith4'].firstname.value = 'James';
+      patientData['james.smith4'].lastname.value = 'Smith';
+      patientData['james.smith4'].lastUpdated.value = moment().unix();
+      patientData['james.smith4'].facility.value = ['5193366551'];
+      patientData['james.smith4'].ohip.value = '2837-124-117 KP';
+      patientData['james.smith4'].roomnum.value = '14A';
+      
+      patientData['james.smith5'] = R.clone(kPatientInputFields);
+      patientData['james.smith5'].id.value = 'james.smith5';
+      patientData['james.smith5'].firstname.value = 'James';
+      patientData['james.smith5'].lastname.value = 'Smith';
+      patientData['james.smith5'].lastUpdated.value = moment().unix();
+      patientData['james.smith5'].facility.value = ['5193366551'];
+      patientData['james.smith5'].ohip.value = '2837-124-117 KP';
+      patientData['james.smith5'].roomnum.value = '14A';
+      
+      patientData['james.smith6'] = R.clone(kPatientInputFields);
+      patientData['james.smith6'].id.value = 'james.smith6';
+      patientData['james.smith6'].firstname.value = 'James';
+      patientData['james.smith6'].lastname.value = 'Smith';
+      patientData['james.smith6'].lastUpdated.value = moment().unix();
+      patientData['james.smith6'].facility.value = ['5193366551'];
+      patientData['james.smith6'].ohip.value = '2837-124-117 KP';
+      patientData['james.smith6'].roomnum.value = '14A';
+
+
 
       $localStorage.patientData = {
         version: kAppVersion,

@@ -24,5 +24,24 @@ angular.module('ianmd.components.patients', [])
       patientData.setCurrentPatient(setPatient);
       $location.path('/patient');
     };
+    
+    vm.getInRowOf = R.memoize(function vmGetInRowOf(maxRow, patients){
+      var rowIndex = 0;
+      var row = [];
+      var rowByRow = [];
+      for(var key in patients){
+          row.push(patients[key]);
+          if (row.length === maxRow){
+              rowByRow.push(row);
+              row = [];
+          }
+      }
+
+      if (row.length){
+          rowByRow.push(row);
+      }
+      
+      return rowByRow;
+    });
   })(this);
 });
