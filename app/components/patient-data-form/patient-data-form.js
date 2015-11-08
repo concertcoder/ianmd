@@ -74,5 +74,15 @@ angular.module('ianmd.components.patientDataForm', [])
     vm.switchMode = function vmSwitchMode(){
       vm.inEditMode = !vm.inEditMode;
     }
+    
+    vm.getTitleFromFilter = function vmGetTitleFromFilter(filter){
+      var filterToTitle = {
+        'Needs': 'Daily Care',
+        'Preferences': 'Preferences',
+        'Personhood': 'Personhood'
+      };
+      
+      return filterToTitle[filter];
+    };
   })(this);
 });
