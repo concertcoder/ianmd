@@ -71,6 +71,22 @@ angular.module('ianmd.core.patient.data', [])
       patientData['sana.marina'].leisureunstruc.value = 6;
       patientData['sana.marina'].leisurenew.value = 4;
       patientData['sana.marina'].profilepic.value = 'assets/images/sana_marina.jpg';
+      patientData['sana.marina'].clothing.value = [{
+        src: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Normatalmadge_crop.jpg',
+        description: 'Casual and comfortable, but not scruffy. For everyday wear'
+      },
+      {
+        src: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Louise_Brooks_ggbain_32453u_crop.jpg',
+        description: 'Elegant and understated, for more formal wear'
+      },
+      {
+        src: 'https://upload.wikimedia.org/wikipedia/commons/d/d2/Joancrawford3.jpg',
+        description: 'Vibrant and fun, for celebrations and special occasions'
+      }];
+      patientData['sana.marina'].haircut.value = [{
+        src: 'https://c1.staticflickr.com/9/8234/8540085135_4fd7342d28_z.jpg',
+        description: 'It\'s not of my face but still looks elegant.'
+      }];
 
        patientData['vicki.chan'] =  R.clone(kPatientInputFields);
        patientData['vicki.chan'].id.value = 'vicki.chan';
@@ -152,6 +168,14 @@ angular.module('ianmd.core.patient.data', [])
        patientData['vicki.chan'].leisureunstruc.value = 3;
        patientData['vicki.chan'].leisurenew.value = 4;
        patientData['vicki.chan'].profilepic.value = 'assets/images/vicki_chan.jpg';
+       patientData['vicki.chan'].clothing.value = [{
+          src: 'http://www.google.ca/imgres?imgurl=http://bmodish.com/wp-content/uploads/2013/03/Casual-Fall-outfits.jpg&imgrefurl=http://bmodish.com/23-stylish-outfit-that-are-perfect-for-early-fall-outfits&h=481&w=550&tbnid=XmbzF0fG4gQJsM:&docid=7IDnqU_Dp37ilM&ei=v5w-VqGzOIrQetzHnYgC&tbm=isch&ved=0CDcQMygGMAZqFQoTCOGOvprO_8gCFQqoHgod3GMHIQ',
+          description: 'Simple and comfortable'
+      }];
+      patientData['vicki.chan'].haircut.value = [{
+        src: 'http://www.google.ca/imgres?imgurl=http://i630.photobucket.com/albums/uu26/dramabeans/drama/2010/gumiho16/gumiho16-00150.jpg&imgrefurl=http://www.dramabeans.com/2010/09/my-girfriend-is-a-gumiho-episode-16-final/&h=450&w=800&tbnid=d70dzYZndfGY5M:&docid=G8-uVH_ed6y86M&ei=GJ4-VrzABMutePSyitAP&tbm=isch&ved=0CB4QMygDMANqFQoTCLysy77P_8gCFcsWHgoddJkC-g',
+        description: 'Short and easy to clean'
+      }];
 
       patientData['mark.dunn'] = R.clone(kPatientInputFields);
       patientData['mark.dunn'].id.value = 'mark.dunn';

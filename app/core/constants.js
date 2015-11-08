@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 52)
+  .constant('kAppVersion', 53)
   .constant('kFacilities', {
     '5193366551': {
       id: '5193366551',
@@ -254,19 +254,13 @@ angular.module('ianmd.constants', [])
       section: 'Needs',
       id: 'clothing',
       display: 'Describe your clothing preferences',
-      editable: true,
-      photoUploadMax: 3,
-      photos: [],
-      value: ''
+      value: []
     },
     'haircut': {
       section: 'Needs',
       id: 'haircut',
       display: 'Describe your haircut preferences',
-      editable: true,
-      photoUploadMax: 1,
-      photos: [],
-      value: ''
+      value: []
     },
     'routines': {
       section: 'Needs',
