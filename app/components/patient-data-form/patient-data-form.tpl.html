@@ -9,7 +9,7 @@
 <div class="row">
     <div class="large-3 columns sidebar">
       <h4 class="profileTitle">{{formCtrl.currentPatient.firstname.value}} {{formCtrl.currentPatient.lastname.value}} <a value="{{formCtrl.inEditMode ? 'view' : 'edit'}}" ng-click="formCtrl.switchMode()" class="right edit"><i class="fa fa-pencil"></i> Edit</a></h4> 
-      <img src="http://placehold.it/200x200" class="circle">
+      <img ng-src="{{formCtrl.currentPatient.profilepic.value}}" class="circle">
       Rm {{formCtrl.currentPatient.roomnum.value}}
       <hr>
       <ul class="side-nav">
