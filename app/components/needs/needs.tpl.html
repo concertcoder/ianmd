@@ -37,7 +37,7 @@
   </table>
   
   <ul class="tastePrefs">
-    <li><span nf-if="ctrl.patient.saltyFood.display">{{ctrl.patient.saltyFood.value}}</span></li>
+    <li><span nf-if="ctrl.patient.saltyFood.display">{{ctrl.fromNum(ctrl.patient.saltyFood.value)}}</span></li>
     <li><span nf-if="ctrl.patient.healthyFood.display">{{ctrl.patient.healthyFood.value}}</span></li>
     <li><span nf-if="ctrl.patient.healthyFood.display">Prefers food from {{ctrl.patient.ethnicFoodOrigin.value}} and {{ctrl.patient.ethnicFoodOrigin.value}}</span></li>
   </ul>

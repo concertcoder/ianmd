@@ -356,7 +356,7 @@ angular.module('ianmd.core.patient.data', [])
         7: 'Absolutely'
       };
 
-      return scaleVal[numToText];
+      return numToText[scaleVal];
     }
 
     return {
