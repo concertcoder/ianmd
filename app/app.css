@@ -34,7 +34,6 @@
 .nav {
   background: #5783C4;	
   padding: 10px 0px 0px 0px;
-  border-bottom: 3px solid #ccc;
 }
 
 .navLogin {
@@ -264,7 +263,7 @@ table tr:nth-of-type(even):hover {
   padding: 0;
 }
 
-li {
+.topNav li {
   display: inline;
   padding-right: 25px;
 }
@@ -283,5 +282,21 @@ ul li a:hover {
 
 .sidebar {
   padding-top: 25px;
-  background: #666;
+  background: #fff;
+}
+
+.side-nav li a:not(.button) {
+  background: #5783C4;
+  color: #fff;
+  font-family: 'brandonText-light', sans-serif;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: none;
+  border: 0;
+  border-radius: 5px;
+}
+
+.side-nav li a:not(.button):hover {
+  background: #3C70AF;
+  color: #fff;
 }
