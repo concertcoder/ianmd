@@ -76,10 +76,6 @@ angular.module('ianmd.core.patient.data', [])
         description: 'Casual and comfortable, but not scruffy. For everyday wear'
       },
       {
-        src: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Louise_Brooks_ggbain_32453u_crop.jpg',
-        description: 'Elegant and understated, for more formal wear'
-      },
-      {
         src: 'https://upload.wikimedia.org/wikipedia/commons/d/d2/Joancrawford3.jpg',
         description: 'Vibrant and fun, for celebrations and special occasions'
       }];
