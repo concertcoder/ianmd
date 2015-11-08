@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 43)
+  .constant('kAppVersion', 45)
   .constant('kFacilities', {
     '5193366551': {
       id: '5193366551',
@@ -31,6 +31,11 @@ angular.module('ianmd.constants', [])
     'id': {
       id: 'id',
       display: 'User Id',
+      value: '',
+    },
+    'profilepic': {
+      id: 'profilepic',
+      display: 'Profile Picture',
       value: '',
     },
     'roomnum': {

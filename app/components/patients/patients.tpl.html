@@ -17,7 +17,7 @@
   <div ng-if="!patientsCtrl.listView">
     <div class="row" ng-repeat="patientRow in patientsCtrl.getInRowOf(4, patientsCtrl.patients)">
       <div class="large-3 columns" ng-repeat="patient in patientRow" ng-click="patientsCtrl.goToPatient(patient)">
-        <img src="http://placehold.it/200x200" class="circle">
+        <img ng-src="{{patient.profilepic.value}}" class="circle">
         <div class="text-center"><span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]"><i class="fa fa-bell yellow"></i></span> {{patient.lastname.value}}, {{patient.firstname.value}}
         <br>Rm {{patient.roomnum.value}}</div>
         <div class="break"></div>
