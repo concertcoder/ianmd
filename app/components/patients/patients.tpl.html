@@ -5,6 +5,8 @@
       <tr>
         <th>Last Name</th>
         <th>First Name</th>
+        <th>OHIP #</th>
+        <th>Room #</th>
         <th width="150">Last Updated</th>
       </tr>
     </thead>
@@ -12,6 +14,8 @@
       <tr ng-repeat="(patientId, patient) in patientsCtrl.patients" ng-click="patientsCtrl.goToPatient(patient)">
         <td>{{patient.lastname.value}}</td>
         <td>{{patient.firstname.value}}</td>
+        <td>{{patient.ohip.value}}</td>
+        <td>{{patient.roomnum.value}}</td>
         <td>{{patientsCtrl.moment.unix(patient.lastUpdated.value).format('MM/DD/YYYY')}}<span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]">*</span></td>
       </tr>
     </tbody>
