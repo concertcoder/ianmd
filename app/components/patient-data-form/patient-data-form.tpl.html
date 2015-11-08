@@ -7,15 +7,16 @@
 </div>  
 
 <div class="row">
-    <div class="large-3 columns sidebar">
+    <div class="large-3 columns sidebar text-center">
       <h4 class="profileTitle">{{formCtrl.currentPatient.firstname.value}} {{formCtrl.currentPatient.lastname.value}} <a value="{{formCtrl.inEditMode ? 'view' : 'edit'}}" ng-click="formCtrl.switchMode()" class="right edit"><i class="fa fa-pencil"></i> Edit</a></h4> 
       <img ng-src="{{formCtrl.currentPatient.profilepic.value}}" class="circle">
-      Rm {{formCtrl.currentPatient.roomnum.value}}
+      <br>Rm {{formCtrl.currentPatient.roomnum.value}}
+      <br>Resident since {{formCtrl.currentPatient.residencesince.value}} 
       <hr>
       <ul class="side-nav">
-        <li><a ng-click="formCtrl.fieldFilter = 'Needs'">Daily Care</a></li>
-        <li><a ng-click="formCtrl.fieldFilter = 'Preferences'">Preferences</a></li>
-        <li><a ng-click="formCtrl.fieldFilter = 'Personhood'">Personhood</a></li>
+        <li><a ng-click="formCtrl.fieldFilter = 'Personhood'">{{formCtrl.currentPatient.gender.value}} Story</a></li>
+        <li><a ng-click="formCtrl.fieldFilter = 'Needs'">{{formCtrl.currentPatient.gender.value}} Interests</a></li>
+        <li><a ng-click="formCtrl.fieldFilter = 'Preferences'">{{formCtrl.currentPatient.gender.value}} Preferences</a></li>
       </ul>
     </div>
     <div class="large-9 columns profileSection">
