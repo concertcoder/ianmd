@@ -13,7 +13,8 @@ angular.module('ianmd.core.user.service', [])
           lastname: 'Gosselin',
           password: 'tester',
           facility: '5193366551',
-          type: kUserTypes.PSW
+          type: kUserTypes.PSW,
+          unseenChangesForUsers: {}
         },
         'tammy.le': {
           username: 'tammy.le',
@@ -21,7 +22,8 @@ angular.module('ianmd.core.user.service', [])
           lastname: 'Le',
           password: 'tester',
           facility: '5193366551',
-          type: kUserTypes.PSW
+          type: kUserTypes.PSW,
+          unseenChangesForUsers: {}
         },
       };
 
@@ -58,9 +60,21 @@ angular.module('ianmd.core.user.service', [])
       $localStorage.userData.currentUserId = null;
     }
 
+    function setUnseenChangeForPatientId(patientId){
+      getUser().unseenChangesForUsers[patientId] = true;
+      $localStorage.userData.data = users;
+    }
+
+    function removeUnseenChangeForPatientId(patientId){
+      delete getUser().unseenChangesForUsers[patientId];
+      $localStorage.userData.data = users;
+    }
+
     return {
       login: login,
       getUser: getUser,
-      logout: logout
+      logout: logout,
+      setUnseenChangeForPatientId: setUnseenChangeForPatientId,
+      removeUnseenChangeForPatientId: removeUnseenChangeForPatientId
     };
   });

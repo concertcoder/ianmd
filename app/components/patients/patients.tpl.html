@@ -12,7 +12,7 @@
       <tr ng-repeat="(patientId, patient) in patientsCtrl.patients" ng-click="patientsCtrl.goToPatient(patient)">
         <td>{{patient.firstname.value}}</td>
         <td>{{patient.lastname.value}}</td>
-        <td>{{patientsCtrl.moment.unix(patient.lastUpdated.value).format('MM/DD/YYYY')}}</td>
+        <td>{{patientsCtrl.moment.unix(patient.lastUpdated.value).format('MM/DD/YYYY')}}<span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]">*</span></td>
       </tr>
     </tbody>
   </table>

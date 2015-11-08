@@ -15,11 +15,13 @@ angular.module('ianmd.components.patients', [])
 )
 .controller('PatientsCtrl', function(userService, patientData, $location) {
   (function (vm) {
-    var facility = userService.getUser().facility;
+    vm.user = userService.getUser();
+    var facility = vm.user.facility;
     vm.moment = moment;
     vm.patients = patientData.getPatientDataByFacility(facility);
 
     vm.goToPatient = function vmGoToPatient(setPatient){
+      userService.removeUnseenChangeForPatientId(setPatient.id.value);
       patientData.setCurrentPatient(setPatient);
       $location.path('/patient');
     };

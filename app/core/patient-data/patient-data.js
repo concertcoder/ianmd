@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.core.patient.data', [])
-  .factory('patientData', function(kPatientInputFields, $localStorage, kAppVersion){
+  .factory('patientData', function(kPatientInputFields, $localStorage, kAppVersion, userService){
     var currentPatientId = null;
     var patientData = {};
 
@@ -49,8 +49,8 @@ angular.module('ianmd.core.patient.data', [])
       }, currentFieldsClone);
 
       $localStorage.patientHistory.data[patient.id.value].push(R.clone(changes));
-
       $localStorage.patientData.data[patient.id.value] = R.clone(patientData[patient.id.value]);
+      userService.setUnseenChangeForPatientId(patient.id.value);
       return true;
     }
 
