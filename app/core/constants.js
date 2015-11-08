@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 53)
+  .constant('kAppVersion', 54)
   .constant('kFacilities', {
     '5193366551': {
       id: '5193366551',
@@ -91,7 +91,29 @@ angular.module('ianmd.constants', [])
       display: 'Last Name',
       value: ''
     },
-
+    'drinkPreferences': {
+      section: 'Needs',
+      id: 'drinkPreferences',
+      display: 'I prefer drinks from',
+      tableDisplay: 'Drink preferences',
+      value: [
+        {
+          drink: 'Coffee',
+          timeOfDay: 'Mornings',
+          preperation: 'Taken black with a little sugar'
+        },
+        {
+          drink: 'Yerba Mate',
+          timeOfDay: 'Afternoon to Evening',
+          preperation: 'Shared with Maria, another resident of South American heritage'
+        },
+        {
+          drink: 'Herbal Tea',
+          timeOfDay: 'Late Evening',
+          preperation: 'Usually chamomile, sometimes lemon tea'
+        }
+      ]
+    },
     'ethnicFoodOrigin': {
       section: 'Needs',
       id: 'ethnicFoodOrigin',
@@ -540,6 +562,14 @@ angular.module('ianmd.constants', [])
       value: '',
       options: [1,2,3,4,5,6,7],
       value: 4
+    },
+    'lifeeventbio': {
+      section: 'Personhood',
+      subcat: 'Important life events',
+      id: 'lifeeventbio',
+      display: 'Think back on the events that effected you as an individual and lead you to be the person you are today',
+      editable: true,
+      value: ''
     },
     'lifeeventchild': {
       section: 'Personhood',
