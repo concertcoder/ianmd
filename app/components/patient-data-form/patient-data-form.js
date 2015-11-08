@@ -15,7 +15,7 @@ angular.module('ianmd.components.patientDataForm', [])
 )
 .controller('PatientDataFormCtrl', function(userService, kPatientInputFields, patientData, $location) {
   (function (vm) {
-    vm.fieldFilter = 'Needs';
+    vm.fieldFilter = 'Personhood';
     vm.showChangeBanner = false;
     /*
     vm.outputFoods = [];
