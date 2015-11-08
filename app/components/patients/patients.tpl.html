@@ -3,15 +3,15 @@
   <table class="patientTable">
     <thead>
       <tr>
-        <th width="200">First Name</th>
         <th>Last Name</th>
+        <th>First Name</th>
         <th width="150">Last Updated</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="(patientId, patient) in patientsCtrl.patients" ng-click="patientsCtrl.goToPatient(patient)">
-        <td>{{patient.firstname.value}}</td>
         <td>{{patient.lastname.value}}</td>
+        <td>{{patient.firstname.value}}</td>
         <td>{{patientsCtrl.moment.unix(patient.lastUpdated.value).format('MM/DD/YYYY')}}<span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]">*</span></td>
       </tr>
     </tbody>

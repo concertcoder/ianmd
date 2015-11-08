@@ -34,6 +34,7 @@
 .nav {
   background: #5783C4;	
   padding: 10px 0px 0px 0px;
+  border-bottom: 3px solid #ccc;
 }
 
 .navLogin {
@@ -75,6 +76,15 @@
 @font-face {
     font-family: brandonText-light;
     src: url(fonts/brandonText-light.ttf);
+}
+
+@font-face {
+    font-family: brandonText-medium;
+    src: url(fonts/brandonText-medium.ttf);
+}
+
+.medium {
+  font-family: 'brandonText-medium', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -125,7 +135,6 @@ body a:hover {
 }
 
 .loginHeadline {
-  margin-top: 30px;
   padding: 50px 0px;
 }
 
@@ -193,13 +202,16 @@ input:not([type]), input:not([password]) {
 
 .button.tiny {
   border: 1px solid #5783C4;
-  width: 75px;
-  height: 35px;
   color: #5783C4;
   border-radius: 50px;
+  padding: 8px 12px;
 }
 
 /* TABLES */
+
+table {
+  border: 0;
+}
 
 table thead tr th {
   font-family: 'brandonText-regular', sans-serif;
@@ -207,7 +219,7 @@ table thead tr th {
   letter-spacing: 1px;
   font-size: 12px;
   font-weight: 600;
-  color: #5783C4;
+  color: #336FC4;
   border-bottom: 2px solid #5783C4;
 }
 
@@ -217,7 +229,7 @@ tr {
 }
 
 tr:hover {
-  background: #eaeaea;
+  background: #FCF5D9;
 }
 
 table tbody tr td, table tr td {
@@ -230,7 +242,7 @@ table tr:nth-of-type(even){
 }
 
 table tr:nth-of-type(even):hover {
-  background: #eaeaea;
+  background: #FCF5D9;
 }
 
 .patientTable {
@@ -267,4 +279,9 @@ ul li a {
 ul li a:hover {
   color: #fff;
   border-bottom: 1px solid #fff;
+}
+
+.sidebar {
+  padding-top: 25px;
+  background: #666;
 }
