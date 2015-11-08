@@ -15,7 +15,7 @@
         <div ng-show="formCtrl.showChangeBanner" class="alert-box">A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a></div>
         <form>
           <div ng-show="formCtrl.inEditMode || field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
-            <p>{{field.display}}</p>
+            <p>{{field.display}} <i ng-if="formCtrl.showChangeBanner && formCtrl.fieldWasChanged(field.id)" tooltip-title="{{formCtrl.getChangeText(field.id)}}" tooltips class="fa fa-info-circle"></i></p>
             <input type="text" ng-if="!field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
             <select type="text" ng-if="field.options" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>
           </div>

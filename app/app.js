@@ -3,6 +3,7 @@
 angular.module('ianmd', [
   'ngRoute',
   'ngStorage',
+  '720kb.tooltips',
   'isteven-multi-select',
   'ianmd.constants',
   'ianmd.core.router.config',

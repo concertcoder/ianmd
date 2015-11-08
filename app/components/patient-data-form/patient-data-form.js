@@ -62,6 +62,15 @@ angular.module('ianmd.components.patientDataForm', [])
       return result;
     };
 
+    vm.fieldWasChanged = function vmFieldWasChanged(fieldId){
+      return !R.isNil(patientData.getPreviousPatientFieldValue(fieldId));
+    };
+
+    vm.getChangeText = function vmGetChangeText(fieldId){
+      var changeValue = patientData.getPreviousPatientFieldValue(fieldId);
+      return 'Value changed from: \'' + (changeValue === '' ? 'No Value' : changeValue) + '\'';
+    };
+
     vm.switchMode = function vmSwitchMode(){
       vm.inEditMode = !vm.inEditMode;
     }

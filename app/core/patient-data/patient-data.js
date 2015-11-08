@@ -135,6 +135,21 @@ angular.module('ianmd.core.patient.data', [])
       return R.clone(patientData[currentPatientId]);
     }
 
+    function getPreviousPatientFieldValue(fieldId) {
+      if (!$localStorage.patientHistory.data[currentPatientId] ||
+        !$localStorage.patientHistory.data[currentPatientId].length) {
+        return null;
+      }
+
+      var found = R.find(R.propEq('id', fieldId),R.last($localStorage.patientHistory.data[currentPatientId]));
+
+      if (found) {
+        return found.value;
+      } else {
+        return null;
+      }
+    }
+
     function setCurrentPatient(patient){
       currentPatientId = patient.id.value;
       $localStorage.patientData.currentPatientId = currentPatientId;
@@ -154,6 +169,7 @@ angular.module('ianmd.core.patient.data', [])
     return {
       getPatientDataById: getPatientDataById,
       getPatientDataByFacility: getPatientDataByFacility,
+      getPreviousPatientFieldValue: getPreviousPatientFieldValue,
       savePatientData: savePatientData,
       getCurrentPatient: getCurrentPatient,
       setCurrentPatient: setCurrentPatient
