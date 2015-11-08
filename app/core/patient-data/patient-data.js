@@ -31,7 +31,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['alex.writer'].lastUpdated.value = moment().unix();
       patientData['alex.writer'].facility.value = ['5193366551'];
       patientData['alex.writer'].ohip.value = '4444-124-117 KP';
-      patientData['alex.writer'].roomnum.value = '14A';
+      patientData['alex.writer'].roomnum.value = '11C';
       
       patientData['danielle.hoffman'] = R.clone(kPatientInputFields);
       patientData['danielle.hoffman'].id.value = 'danielle.hoffman';
@@ -40,7 +40,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['danielle.hoffman'].lastUpdated.value = moment().unix();
       patientData['danielle.hoffman'].facility.value = ['5193366551'];
       patientData['danielle.hoffman'].ohip.value = '2837-333-117 KP';
-      patientData['danielle.hoffman'].roomnum.value = '14A';
+      patientData['danielle.hoffman'].roomnum.value = '14C';
       
       patientData['sarah.bedrock'] = R.clone(kPatientInputFields);
       patientData['sarah.bedrock'].id.value = 'sarah.bedrock';
@@ -49,7 +49,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['sarah.bedrock'].lastUpdated.value = moment().unix();
       patientData['sarah.bedrock'].facility.value = ['5193366551'];
       patientData['sarah.bedrock'].ohip.value = '2837-124-222 KP';
-      patientData['sarah.bedrock'].roomnum.value = '14A';
+      patientData['sarah.bedrock'].roomnum.value = '9A';
       
       patientData['tammy.chen'] = R.clone(kPatientInputFields);
       patientData['tammy.chen'].id.value = 'tammy.chen';
@@ -58,7 +58,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['tammy.chen'].lastUpdated.value = moment().unix();
       patientData['tammy.chen'].facility.value = ['5193366551'];
       patientData['tammy.chen'].ohip.value = '9999-124-117 KP';
-      patientData['tammy.chen'].roomnum.value = '14A';
+      patientData['tammy.chen'].roomnum.value = '7B';
       
       patientData['chris.gregory'] = R.clone(kPatientInputFields);
       patientData['chris.gregory'].id.value = 'chris.gregory';
@@ -67,7 +67,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['chris.gregory'].lastUpdated.value = moment().unix();
       patientData['chris.gregory'].facility.value = ['5193366551'];
       patientData['chris.gregory'].ohip.value = '2837-999-117 KP';
-      patientData['chris.gregory'].roomnum.value = '14A';
+      patientData['chris.gregory'].roomnum.value = '30C';
       
       patientData['james.red'] = R.clone(kPatientInputFields);
       patientData['james.red'].id.value = 'james.red';
@@ -76,7 +76,7 @@ angular.module('ianmd.core.patient.data', [])
       patientData['james.red'].lastUpdated.value = moment().unix();
       patientData['james.red'].facility.value = ['5193366551'];
       patientData['james.red'].ohip.value = '2837-124-999 KP';
-      patientData['james.red'].roomnum.value = '14A';
+      patientData['james.red'].roomnum.value = '2A';
 
       $localStorage.patientData = {
         version: kAppVersion,
