@@ -25,6 +25,15 @@ angular.module('ianmd.core.user.service', [])
           type: kUserTypes.PSW,
           unseenChangesForUsers: {}
         },
+        'john.chan': {
+          username: 'john.chan',
+          firstname: 'John',
+          lastname: 'Chan',
+          password: 'tester',
+          facility: '4162223211',
+          type: kUserTypes.FAMILY_CAREGIVER,
+          unseenChangesForUsers: {}
+        }
       };
 
       $localStorage.userData = {

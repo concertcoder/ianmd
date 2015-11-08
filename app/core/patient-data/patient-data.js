@@ -76,7 +76,7 @@ angular.module('ianmd.core.patient.data', [])
        patientData['vicki.chan'].id.value = 'vicki.chan';
        patientData['vicki.chan'].roomnum.value = '5B';
        patientData['vicki.chan'].ohip.value = '3434-777-888 KP';
-       patientData['vicki.chan'].facility.value = ['5193366551'];
+       patientData['vicki.chan'].facility.value = ['5193366551', '4162223211'];
        patientData['vicki.chan'].lastUpdated.value = 1446951031;
        patientData['vicki.chan'].firstname.value = 'Vicki';
        patientData['vicki.chan'].lastname.value = 'Chan';

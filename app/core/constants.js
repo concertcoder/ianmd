@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 45)
+  .constant('kAppVersion', 48)
   .constant('kFacilities', {
     '5193366551': {
       id: '5193366551',
@@ -19,6 +19,14 @@ angular.module('ianmd.constants', [])
       postal: 'M5S 2L9',
       phone: '416-343-3244',
       name: 'Kensington Gardens'
+    },
+    '4162223211': {
+      street: '801 King Street West',
+      city: 'Toronto',
+      state: 'Ontario',
+      postal: 'M5V 3C9',
+      phone: '416-222-3211',
+      name: 'Viki Chan\'s Son'
     }
   })
   .constant('kUserTypes', {
