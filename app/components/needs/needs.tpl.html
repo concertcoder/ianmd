@@ -47,34 +47,23 @@
     <table class="patientTable">
     <thead>
       <tr>
-        <th>Meal</th>
-        <th>Serving Time</th>
-        <th>Frequency</th>
-        <th>Notes</th>
+        <th>Drink</th>
+        <th>Time of Day</th>
+        <th>Preparation</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Breakfast</td>
-        <td><span ng-if="ctrl.patient.breakfastTime.value">{{ctrl.patient.breakfastTime.value}}</span></td>
-        <td><span ng-if="ctrl.patient.breakfastFreq.value">{{ctrl.patient.breakfastFreq.value}}</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Lunch</td>
-        <td><span ng-if="ctrl.patient.lunchTime.value">{{ctrl.patient.lunchTime.value}}</span></td>
-        <td><span ng-if="ctrl.patient.lunchFreq.value">{{ctrl.patient.lunchFreq.value}}</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Dinner</td>
-        <td><span ng-if="ctrl.patient.dinnerTime.value">{{ctrl.patient.dinnerTime.value}}</span></td>
-        <td><span ng-if="ctrl.patient.dinnerFreq.value">{{ctrl.patient.dinnerFreq.value}}</span></td>
+      <tr ng-repeat="drink in ctrl.patient.drinkPreferences.value">
+        <td>{{drink.drink}}</td>
+        <td>{{drink.timeOfDay}}</td>
+        <td>{{drink.preperation}}</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <div class="break"></div>
+  <h5 class="light">Clothing Preferences</h5>
+  <div class="
   
     <h5 class="light">Personal Care Product Preferences</h5>
     <table class="patientTable">
