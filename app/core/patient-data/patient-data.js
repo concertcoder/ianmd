@@ -105,6 +105,11 @@ angular.module('ianmd.core.patient.data', [])
       patientData[patient.id.value].lastUpdated.value = moment().unix();
 
       var changes = R.filter(function(currentField){
+        if(currentField === undefined ||
+          currentField.id === undefined ||
+          currentField.value === undefined) {
+          return false;
+        }
         return !R.equals(currentField.value, patientData[patient.id.value][currentField.id].value);
       }, currentFieldsClone);
 
