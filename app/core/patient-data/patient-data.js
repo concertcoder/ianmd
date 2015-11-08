@@ -341,12 +341,31 @@ angular.module('ianmd.core.patient.data', [])
       return results;
     }
 
+    function getTextFromScaleValue(scaleVal) {
+      if(!scaleVal) {
+        return '';
+      }
+
+      var numToText = {
+        1: 'Absolutely Not',
+        2: 'Moderately Not',
+        3: 'Somewhat Not',
+        4: 'Neutral',
+        5: 'Somewhat',
+        6: 'Moderately',
+        7: 'Absolutely'
+      };
+
+      return scaleVal[numToText];
+    }
+
     return {
       getPatientDataById: getPatientDataById,
       getPatientDataByFacility: getPatientDataByFacility,
       getPreviousPatientFieldValue: getPreviousPatientFieldValue,
       savePatientData: savePatientData,
       getCurrentPatient: getCurrentPatient,
-      setCurrentPatient: setCurrentPatient
+      setCurrentPatient: setCurrentPatient,
+      getTextFromScaleValue: getTextFromScaleValue
     };
   });

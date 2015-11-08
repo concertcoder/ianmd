@@ -96,6 +96,7 @@ angular.module('ianmd.constants', [])
       section: 'Needs',
       id: 'ethnicFoodOrigin',
       display: 'I prefer foods from',
+      tableDisplay: 'Preferred foods',
       editable: true,
       options: [
         'South America',
@@ -115,77 +116,86 @@ angular.module('ianmd.constants', [])
       subcat: 'Food Preferences',
       id: 'healthyFood',
       display: 'It is important to me that the food I eat is healthy',
+      ableDisplay: 'Health Conscious',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'hotBreakfast': {
       section: 'Needs',
       subcat: 'Food Preferences',
       id: 'hotBreakfast',
       display: 'It is important to me that I have a hot breakfast',
+      tableDisplay: 'Hot Breakfast',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'hotLunch': {
       section: 'Needs',
       subcat: 'Food Preferences',
       id: 'hotLunch',
       display: 'It is important to me that I have a hot lunch',
+      tableDisplay: 'Hot Lunch',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'hotDinner': {
       section: 'Needs',
       subcat: 'Food Preferences',
       id: 'hotDinner',
       display: 'It is important to me that I have a hot dinner',
+      tableDisplay: 'Hot Dinner',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'spicyFood': {
       section: 'Needs',
       subcat: 'Food Preferences',
       id: 'spicyFood',
       display: 'I like spicy food',
+      tableDisplay: 'Spicy Tolerance',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'sweetFood': {
       section: 'Needs',
       id: 'sweetFood',
       display: 'I like sweet food',
+      tableDisplay: 'Sweet Tooth',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'saltyFood': {
       section: 'Needs',
       subcat: 'Food Preferences',
       id: 'saltyFood',
       display: 'I like salty food',
+      tableDisplay: 'Salt Food',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'unseasonedFood': {
       section: 'Needs',
       subcat: 'Food Preferences',
       id: 'unseasonedFood',
       display: 'I prefer unseasoned or lightly-seasoned food',
+      tableDisplay: 'Light Seasoning',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'breakfastTime': {
       section: 'Needs',
       subcat: 'Food Preferences',
       id: 'breakfastTime',
       display: 'I prefer to have breakfast',
+      tableDisplay: 'Breakfast Time',
       editable: true,
       options: ['Early in the morning', 'mid-morning', 'late morning'],
       value: ''
@@ -195,6 +205,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Food Preferences',
       id: 'lunchTime',
       display: 'I prefer to have lunch',
+      tableDisplay: 'Lunch Time',
       editable: true,
       options: ['Before noon', 'around noon', 'after noon'],
       value: ''
@@ -204,6 +215,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Food Preferences',
       id: 'dinnerTime',
       display: 'I prefer to have dinner',
+      tableDisplay: 'Dinner Time',
       editable: true,
       options: ['Early in the evening', 'mid-evening', 'late in the evening'],
       value: ''
@@ -213,6 +225,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Food Preferences',
       id: 'breakfastFreq',
       display: 'I typically eat breakfast',
+      tableDisplay: 'Breakfast Freq.',
       editable: true,
       options: ['Every day', 'most days', 'on occasion', 'infrequently', 'never'],
       value: ''
@@ -222,6 +235,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Food Preferences',
       id: 'lunchFreq',
       display: 'I typically eat lunch',
+      tableDisplay: 'Lunch Freq.',
       editable: true,
       options: ['Every day', 'most days', 'on occasion', 'infrequently', 'never'],
       value: ''
@@ -231,6 +245,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Food Preferences',
       id: 'dinnerFreq',
       display: 'I typically eat dinner',
+      tableDisplay: 'Dinner Freq.',
       editable: true,
       options: ['Every day', 'most days', 'on occasion', 'infrequently', 'never'],
       value: ''
@@ -265,6 +280,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'toothpaste',
       display: 'My favourite toothpaste is',
+      tableDisplay: 'Toothpaste',
       editable: true,
       value: ''
     },
@@ -273,6 +289,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'toothbrush',
       display: 'My favourite toothbrush is',
+      tableDisplay: 'Toothbrush',
       editable: true,
       value: ''
     },
@@ -281,6 +298,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'floss',
       display: 'My favourite floss is',
+      tableDisplay: 'Floss',
       editable: true,
       value: ''
     },
@@ -289,6 +307,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'mouthwasher',
       display: 'My favourite mouthwash is',
+      tableDisplay: 'Mouthwash',
       editable: true,
       value: ''
     },
@@ -297,6 +316,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'dentureSolution',
       display: 'My favourite denture solution is',
+      tableDisplay: 'Denture Sol.',
       editable: true,
       value: ''
     },
@@ -305,6 +325,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'moisturizer',
       display: 'My favourite moisturizer is',
+      tableDisplay: 'Moisturizer',
       editable: true,
       value: ''
     },
@@ -313,6 +334,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'facialcleanser',
       display: 'My favourite facial cleanser is',
+      tableDisplay: 'Facial Cleanser',
       editable: true,
       value: ''
     },
@@ -321,6 +343,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'handsoap',
       display: 'My favourite hand soap is',
+      tableDisplay: 'Hand Soap',
       editable: true,
       value: ''
     },
@@ -329,14 +352,16 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'bodywash',
       display: 'My favourite body wash is',
+      tableDisplay: 'Body Wash',
       editable: true,
       value: ''
     },
     'shavingcream': {
       section: 'Needs',
       subcat: 'Grooming',
-      id: 'bodywash',
+      id: 'shavingcream',
       display: 'My favourite shaving cream is',
+      tableDisplay: 'Shaving Cream',
       editable: true,
       value: ''
     },
@@ -345,6 +370,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'deodorant',
       display: 'My favourite deodorant is',
+      tableDisplay: 'Deodorant',
       editable: true,
       value: ''
     },
@@ -353,6 +379,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'perfume',
       display: 'My favourite perfume/cologne is',
+      tableDisplay: 'Perfume/Cologne',
       editable: true,
       value: ''
     },
@@ -361,6 +388,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'shampoo',
       display: 'My favourite shampoo is',
+      tableDisplay: 'Shampoo',
       editable: true,
       value: ''
     },
@@ -369,6 +397,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'conditioner',
       display: 'My favourite conditioner is',
+      tableDisplay: 'Conditioner',
       editable: true,
       value: ''
     },
@@ -377,6 +406,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'hairspray',
       display: 'My favourite hairspray is',
+      tableDisplay: 'Hairspray',
       editable: true,
       value: ''
     },
@@ -385,6 +415,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'stylingproduct',
       display: 'My favourite styling product is',
+      tableDisplay: 'Styling Product',
       editable: true,
       value: ''
     },
@@ -393,6 +424,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Grooming',
       id: 'hairdye',
       display: 'My favourite hair dye is',
+      tableDisplay: 'Hair Dye',
       editable: true,
       value: ''
     },
@@ -442,6 +474,7 @@ angular.module('ianmd.constants', [])
       section: 'Preferences',
       id: 'music',
       display: 'What is your favourite song or album?',
+      tableDisplay: 'Music',
       editable: true,
       value: ''
     },
@@ -456,6 +489,7 @@ angular.module('ianmd.constants', [])
       section: 'Preferences',
       id: 'books',
       display: 'What is your favourite book?',
+      tableDisplay: 'Book',
       editable: true,
       value: ''
     },
@@ -481,7 +515,7 @@ angular.module('ianmd.constants', [])
       editable: true,
       value: '',
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'friendshipcultural': {
       section: 'Personhood',
@@ -491,7 +525,7 @@ angular.module('ianmd.constants', [])
       editable: true,
       value: '',
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'friendshipbeliefs': {
       section: 'Personhood',
@@ -501,7 +535,7 @@ angular.module('ianmd.constants', [])
       editable: true,
       value: '',
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'friendshipemotional': {
       section: 'Personhood',
@@ -511,7 +545,7 @@ angular.module('ianmd.constants', [])
       editable: true,
       value: '',
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'lifeeventchild': {
       section: 'Personhood',
@@ -574,27 +608,30 @@ angular.module('ianmd.constants', [])
       subcat: 'Personal Values - Factors influencing who I am',
       id: 'workties',
       display: 'Who I am is strongly tied to my work',
+      tableDisplay: 'Defined by Work',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'familyties': {
       section: 'Personhood',
       subcat: 'Personal Values - Factors influencing who I am',
       id: 'familyties',
       display: 'Who I am is strongly tied to my family',
+      tableDisplay: 'Defined by Family',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'friendties': {
       section: 'Personhood',
       subcat: 'Personal Values - Factors influencing who I am',
       id: 'friendties',
       display: 'Who I am is strongly tied to my friends and social networks',
+      tableDisplay: 'Defined by Friends',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'outsideworkties': {
       section: 'Personhood',
@@ -603,25 +640,27 @@ angular.module('ianmd.constants', [])
       display: 'Who I am is strongly tied to what I do outside of work and family (hobbies, activities, volunteering, leisure time, etc.)',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'politicalties': {
       section: 'Personhood',
       subcat: 'Personal Values - Factors influencing who I am',
       id: 'politicalties',
       display: 'Who I am is strongly tied to my political beliefs',
+      tableDisplay: 'Defined by Politics',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'religiousties': {
       section: 'Personhood',
       subcat: 'Personal Values - Factors influencing who I am',
       id: 'religiousties',
       display: 'Who I am is strongly tied to my religious beliefs',
+      tableDisplay: 'Defined by Faith',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
 
     'devtalents': {
@@ -631,7 +670,7 @@ angular.module('ianmd.constants', [])
       display: 'To fully develop your talents, you need to have a job',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'nowork': {
       section: 'Personhood',
@@ -640,34 +679,37 @@ angular.module('ianmd.constants', [])
       display: 'It is humiliating to receive money without working for it',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'lazy': {
       section: 'Personhood',
       subcat: 'Personal Values - Work',
       id: 'lazy',
       display: 'People who don’t work become lazy',
+      tableDisplay: 'Need to Work',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'duty': {
       section: 'Personhood',
       subcat: 'Personal Values - Work',
       id: 'duty',
       display: 'Work is a duty towards society',
+      tableDisplay: 'Communitarian',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'workfirst': {
       section: 'Personhood',
       subcat: 'Personal Values - Work',
       id: 'workfirst',
       display: 'Work should always come first, even if it means less spare time',
+      tableDisplay: 'Workaholism',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
 
     'leisuretomeet': {
@@ -675,35 +717,39 @@ angular.module('ianmd.constants', [])
       subcat: 'Personal Values - Leisure',
       id: 'leisuretomeet',
       display: 'I prefer using leisure time to meet people',
+      tableDisplay: 'Social',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'leisuretorelax': {
       section: 'Personhood',
       subcat: 'Personal Values - Leisure',
       id: 'leisuretorelax',
       display: 'I prefer using leisure time to relax',
+      tableDisplay: 'Downtime',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'leisureunstruc': {
       section: 'Personhood',
       subcat: 'Personal Values - Leisure',
       id: 'leisureunstruc',
       display: 'I prefer leisure time that is unstructured',
+      tableDisplay: 'Freebird',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     },
     'leisurenew': {
       section: 'Personhood',
       subcat: 'Personal Values - Leisure',
       id: 'leisurenew',
       display: 'I prefer using leisure time to learn something new',
+      tableDisplay: 'Lifetime Learner',
       editable: true,
       options: [1,2,3,4,5,6,7],
-      value: 3
+      value: 4
     }
   });
