@@ -1,28 +1,25 @@
-<div class="section">
   <div class="row">
-    <div class="large-12 columns">
+    <div class="large-3 columns sidebar">
+      <h5><i class="fa fa-user"></i> {{formCtrl.currentPatient.firstname.value}} {{formCtrl.currentPatient.lastname.value}} <input type="button" value="{{formCtrl.inEditMode ? 'view' : 'edit'}}" class="button tiny" ng-click="formCtrl.switchMode()"></h5>
+      <img src="http://placehold.it/250x200">
+      <hr>
+      <ul class="side-nav">
+        <li><a href="#">Needs</a></li>
+        <li><a href="#">Preferences</a></li>
+        <li><a href="#">Personhood</a></li>
+      </ul>
+    </div>
+    <div class="large-9 columns">
       <a ng-click="formCtrl.goBack()"><i class="fa fa-long-arrow-left blue"></i> Back</a>
+      <div class="break"></div>
+        <div ng-show="formCtrl.showChangeBanner" class="alert-box">A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a></div>
+        <form>
+          <div ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
+            <p>{{field.display}}</p>
+            <input type="text" ng-if="!field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
+            <select type="text" ng-if="field.options" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>
+          </div>
+          <input ng-show="formCtrl.inEditMode" type="button" value="Save" ng-click="formCtrl.save()">
+        </form>
     </div>
   </div>
-  <div class="break"></div>
-  <div class="row">
-    <div class="large-12 columns">
-      <h3><i class="fa fa-user"></i> {{formCtrl.currentPatient.firstname.value}} {{formCtrl.currentPatient.lastname.value}} <input type="button" value="{{formCtrl.inEditMode ? 'view' : 'edit'}}" class="button tiny" ng-click="formCtrl.switchMode()"></h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-    <div ng-show="formCtrl.showChangeBanner" class="alert-box">A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a></div>
-    <form>
-      <div ng-show="formCtrl.inEditMode || field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
-        <p>{{field.display}}</p>
-        <input type="text" ng-if="!field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
-        <select type="text" ng-if="field.options" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>
-      </div>
-      <input ng-show="formCtrl.inEditMode" type="button" value="Save" ng-click="formCtrl.save()">
-    </form>
-    <!--
-    <div isteven-multi-select input-model="formCtrl.foods" output-model="formCtrl.outputFoods" button-label="name" item-label="name" tick-property="selected"></div><!-->
-    </div>
-  </div>
-</div>
