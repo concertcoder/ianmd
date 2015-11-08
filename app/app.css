@@ -398,3 +398,7 @@ ul li a:hover {
   padding-top: 10px;
   font-size: 14px;
 }
+
+.patientTable img {
+    margin-right: 13px;
+}

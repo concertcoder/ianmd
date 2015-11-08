@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ianmd.constants', [])
-  .constant('kAppVersion', 50)
+  .constant('kAppVersion', 52)
   .constant('kFacilities', {
     '5193366551': {
       id: '5193366551',
@@ -116,7 +116,7 @@ angular.module('ianmd.constants', [])
       subcat: 'Food Preferences',
       id: 'healthyFood',
       display: 'It is important to me that the food I eat is healthy',
-      ableDisplay: 'Health Conscious',
+      tableDisplay: 'Health Conscious',
       editable: true,
       options: [1,2,3,4,5,6,7],
       value: 4
@@ -197,8 +197,8 @@ angular.module('ianmd.constants', [])
       display: 'I prefer to have breakfast',
       tableDisplay: 'Breakfast Time',
       editable: true,
-      options: ['Early in the morning', 'mid-morning', 'late morning'],
-      value: ''
+      options: ['Early in the morning', 'Mid-morning', 'Late morning'],
+      value: 'Mid-morning'
     },
     'lunchTime': {
       section: 'Needs',
@@ -207,8 +207,8 @@ angular.module('ianmd.constants', [])
       display: 'I prefer to have lunch',
       tableDisplay: 'Lunch Time',
       editable: true,
-      options: ['Before noon', 'around noon', 'after noon'],
-      value: ''
+      options: ['Before noon', 'Around noon', 'After noon'],
+      value: 'Around noon'
     },
     'dinnerTime': {
       section: 'Needs',
@@ -217,8 +217,8 @@ angular.module('ianmd.constants', [])
       display: 'I prefer to have dinner',
       tableDisplay: 'Dinner Time',
       editable: true,
-      options: ['Early in the evening', 'mid-evening', 'late in the evening'],
-      value: ''
+      options: ['Early in the evening', 'Mid-evening', 'Late in the evening'],
+      value: 'Mid-evening'
     },
     'breakfastFreq': {
       section: 'Needs',
@@ -227,8 +227,8 @@ angular.module('ianmd.constants', [])
       display: 'I typically eat breakfast',
       tableDisplay: 'Breakfast Freq.',
       editable: true,
-      options: ['Every day', 'most days', 'on occasion', 'infrequently', 'never'],
-      value: ''
+      options: ['Every day', 'Most days', 'On occasion', 'Infrequently', 'Never'],
+      value: 'Every day'
     },
     'lunchFreq': {
       section: 'Needs',
@@ -237,8 +237,8 @@ angular.module('ianmd.constants', [])
       display: 'I typically eat lunch',
       tableDisplay: 'Lunch Freq.',
       editable: true,
-      options: ['Every day', 'most days', 'on occasion', 'infrequently', 'never'],
-      value: ''
+      options: ['Every day', 'Most days', 'On occasion', 'Infrequently', 'Never'],
+      value: 'Every day'
     },
     'dinnerFreq': {
       section: 'Needs',
@@ -247,8 +247,8 @@ angular.module('ianmd.constants', [])
       display: 'I typically eat dinner',
       tableDisplay: 'Dinner Freq.',
       editable: true,
-      options: ['Every day', 'most days', 'on occasion', 'infrequently', 'never'],
-      value: ''
+      options: ['Every day', 'Most days', 'On occasion', 'Infrequently', 'Never'],
+      value: 'Every day'
     },
     'clothing': {
       section: 'Needs',

@@ -13,8 +13,27 @@ angular.module('ianmd.components.patients', [])
     };
   }
 )
-.controller('PatientsCtrl', function(userService, patientData, $location) {
+.controller('PatientsCtrl', function(userService, patientData, $location, kPatientInputFields) {
   (function (vm) {
+    vm.popoverOn = true;
+    vm.extraFields = [
+      'lunchTime',
+      'lunchFreq',
+      'healthyFood'
+    ];
+
+    vm.getValue = function(value){
+      if (typeof value === 'string') {
+        return value === '' ? 'N/A' : value;
+      } else {
+        return patientData.getTextFromScaleValue(value);
+      }
+    };
+
+    vm.getFieldName = function(fieldId){
+      return kPatientInputFields[fieldId].tableDisplay;
+    };
+
     vm.user = userService.getUser();
     var facility = vm.user.facility;
     vm.moment = moment;
@@ -43,5 +62,36 @@ angular.module('ianmd.components.patients', [])
       
       return rowByRow;
     });
+
+    vm.getChangeableFields = R.memoize(function vmGetChangeableFields(){
+      var fieldClone = R.clone(kPatientInputFields);
+      return R.filter(function(field){
+        return vm.extraFields.indexOf(field.id) === -1 && field.tableDisplay
+      }, R.values(fieldClone));
+    });
+
+    vm.swapField = function vmSwapField(changeTo, changeFrom){
+      var indexOfFrom = vm.extraFields.indexOf(changeFrom);
+      vm.extraFields[indexOfFrom] = changeTo;
+    };
+
+    vm.popoverShowing = function popoverShowing(){
+      var popovers = document.querySelectorAll('.ns-popover-list-theme');
+      var showing = false;
+      R.forEach(function(popover){
+        if(popover.style.display !== 'none') {
+          showing = true;
+        }
+      }, popovers);
+      return showing;
+    };
+
+    vm.closePopUps = function closePopUps(){
+      var popovers = document.querySelectorAll('.ns-popover-list-theme');
+      R.forEach(function(popover){
+        popover.style.display = 'none';
+      }, popovers);
+      vm.popoverOn = !vm.popoverOn;
+    };
   })(this);
 });

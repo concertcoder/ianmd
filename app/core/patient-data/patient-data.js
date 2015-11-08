@@ -24,10 +24,10 @@ angular.module('ianmd.core.patient.data', [])
       patientData['sana.marina'].sweetFood.value = 3;
       patientData['sana.marina'].saltyFood.value = 6;
       patientData['sana.marina'].unseasonedFood.value = 3;
-      patientData['sana.marina'].breakfastTime.value = 'late morning';
-      patientData['sana.marina'].lunchTime.value = 'around noon';
-      patientData['sana.marina'].dinnerTime.value = 'late in the evening';
-      patientData['sana.marina'].breakfastFreq.value = 'most days';
+      patientData['sana.marina'].breakfastTime.value = 'Late morning';
+      patientData['sana.marina'].lunchTime.value = 'Around noon';
+      patientData['sana.marina'].dinnerTime.value = 'Late in the evening';
+      patientData['sana.marina'].breakfastFreq.value = 'Most days';
       patientData['sana.marina'].lunchFreq.value = 'Every day';
       patientData['sana.marina'].dinnerFreq.value = 'Every day';
       patientData['sana.marina'].clothing.value = 'They reflect my personal style, and are suitable at cocktail parties as well as intimate events - https://upload.wikimedia.org/wikipedia/commons/f/f2/Normatalmadge_crop.jpg, https://upload.wikimedia.org/wikipedia/commons/8/82/Louise_Brooks_ggbain_32453u_crop.jpg, https://upload.wikimedia.org/wikipedia/commons/d/d2/Joancrawford3.jpg';
@@ -89,8 +89,8 @@ angular.module('ianmd.core.patient.data', [])
        patientData['vicki.chan'].sweetFood.value = 3;
        patientData['vicki.chan'].saltyFood.value = 3;
        patientData['vicki.chan'].unseasonedFood.value = 5;
-       patientData['vicki.chan'].breakfastTime.value = 'mid-morning';
-       patientData['vicki.chan'].lunchTime.value = 'after noon';
+       patientData['vicki.chan'].breakfastTime.value = 'Mid-morning';
+       patientData['vicki.chan'].lunchTime.value = 'After noon';
        patientData['vicki.chan'].dinnerTime.value = 'Early in the evening';
        patientData['vicki.chan'].breakfastFreq.value = 'Every day';
        patientData['vicki.chan'].lunchFreq.value = 'Every day';

@@ -14,6 +14,11 @@
     "angular-multi-select": "~4.0.0",
     "ngstorage": "~0.3.9",
     "moment": "~2.10.6",
-    "angular-tooltips": "~0.1.25"
+    "angular-tooltips": "~0.1.25",
+    "angular-popover-toggle": "~0.0.10",
+    "nsPopover": "~0.6.8"
+  },
+  "resolutions": {
+    "angular": "1.4.7"
   }
 }

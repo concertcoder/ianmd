@@ -29,19 +29,25 @@
     <thead>
       <tr>
         <th width="5"></th>
-        <th>Last Name</th>
-        <th>First Name</th>
-        <th>OHIP #</th>
+        <th>Resident</th>
+        <th ng-repeat="extraField in patientsCtrl.extraFields" 
+          ns-popover="{{patientsCtrl.popoverOn}}"
+          ns-popover-template="popover"
+          ns-popover-trigger="click"
+          ns-popover-placement="bottom"
+          class="changeable-field"
+          ns-popover-hide-on-click="false"
+          ng-class="{changing: patientsCtrl.changeFieldId === extraField && patientsCtrl.popoverShowing()}"
+          ng-click="patientsCtrl.changeFieldId = extraField; patientsCtrl.popoverOn = !patientsCtrl.popoverOn;">{{patientsCtrl.getFieldName(extraField)}}<i class="fa fa-angle-down"></i></th>
         <th>Room #</th>
-        <th width="150">Last Updated</th>
+        <th>Last Updated</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="(patientId, patient) in patientsCtrl.patients" ng-click="patientsCtrl.goToPatient(patient)">
         <td><span ng-if="patientsCtrl.user.unseenChangesForUsers[patient.id.value]"><i class="fa fa-bell yellow"></i></span></td>
-        <td>{{patient.lastname.value}}</td>
-        <td>{{patient.firstname.value}}</td>
-        <td>{{patient.ohip.value}}</td>
+        <td><img ng-src="{{patient.profilepic.value}}" width="30" class="circle">{{patient.firstname.value}} {{patient.lastname.value}}</td>
+        <td ng-repeat="extraField in patientsCtrl.extraFields">{{patientsCtrl.getValue(patient[extraField].value)}}</td>
         <td>{{patient.roomnum.value}}</td>
         <td>{{patientsCtrl.moment.unix(patient.lastUpdated.value).format('MM/DD/YYYY')}}</td>
       </tr>
@@ -49,5 +55,10 @@
   </table>
   </div>
 </div>
-  
+<script type="text/ng-template" id="popover">
+  <span class="triangle"></span
+  <ul>
+    <li ng-if="tableField.tableDisplay" ng-repeat="tableField in patientsCtrl.getChangeableFields()" ng-click="patientsCtrl.swapField(tableField.id, patientsCtrl.changeFieldId); patientsCtrl.closePopUps()"><a>{{tableField.tableDisplay}}</a></li>
+  </ul>
+</script>
 </div>

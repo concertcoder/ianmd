@@ -5,6 +5,7 @@ angular.module('ianmd', [
   'ngStorage',
   '720kb.tooltips',
   'isteven-multi-select',
+  'nsPopover',
   'ianmd.constants',
   'ianmd.core.router.config',
   'ianmd.core.user.service',
