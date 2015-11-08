@@ -23,16 +23,20 @@
       <div class="break"></div>
 <!--        <div ng-show="formCtrl.showChangeBanner" class="alert-box radius"><i class="fa fa-bell"></i>&nbsp; A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a></div>-->
         
-          <h4 class="profileTitle">{{formCtrl.getTitleFromFilter(formCtrl.fieldFilter)}} </h4>
-        <form>
-          <div ng-if="formCtrl.inEditMode || field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
+        <h4 class="profileTitle">{{formCtrl.getTitleFromFilter(formCtrl.fieldFilter)}} </h4>
+        <form ng-if="formCtrl.inEditMode">
+          <div ng-if="field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
             <p>{{field.display}} <i ng-if="formCtrl.showChangeBanner && formCtrl.fieldWasChanged(field.id)" tooltip-title="{{formCtrl.getChangeText(field.id)}}" tooltips class="fa fa-info-circle"></i></p>
-            <span ng-if="!formCtrl.inEditMode">{{field.value}}</span>
-            <input ng-if="formCtrl.inEditMode && !field.options" type="text" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
-            <select ng-if="formCtrl.inEditMode && field.options" type="text" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>
+            <input ng-if="!field.options" type="text" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
+            <select ng-if="field.options" type="text" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>
           </div>
-          <input ng-if="formCtrl.inEditMode" type="button" class="button large right" value="Save" ng-click="formCtrl.save()">
+          <input type="button" class="button large right" value="Save" ng-click="formCtrl.save()">
         </form>
+        <div ng-if="!formCtrl.inEditMode">
+          <preferences ng-if="formCtrl.fieldFilter === 'Preferences'" patient="formCtrl.currentPatient"></preferences>
+          <personhood ng-if="formCtrl.fieldFilter === 'Personhood'" patient="formCtrl.currentPatient"></personhood>
+          <needs ng-if="formCtrl.fieldFilter === 'Needs'" patient="formCtrl.currentPatient"></needs>
+        </div>
     </div>
   </div>
 </div>

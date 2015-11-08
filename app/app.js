@@ -12,6 +12,9 @@ angular.module('ianmd', [
   'ianmd.components.headerMenu',
   'ianmd.components.patientDataForm',
   'ianmd.components.patients',
+  'ianmd.components.preferences',
+  'ianmd.components.personhood',
+  'ianmd.components.needs',
   'ianmd.sections.patient',
   'ianmd.sections.home',
   'ianmd.sections.login'
