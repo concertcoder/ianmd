@@ -300,3 +300,7 @@ ul li a:hover {
   background: #3C70AF;
   color: #fff;
 }
+
+.circle {
+  border-radius: 50%;
+}
