@@ -1,6 +1,14 @@
-  <div class="row">
-    <div class="large-3 columns sidebar text-center">
-      <h4>{{formCtrl.currentPatient.firstname.value}} {{formCtrl.currentPatient.lastname.value}}</h4>
+<div>
+<div class="row">
+  <div class="break"></div>
+    <div ng-show="formCtrl.showChangeBanner" class="alert-box radius">
+      <i class="fa fa-bell"></i>&nbsp; A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a>
+    </div>
+</div>  
+
+<div class="row">
+    <div class="large-3 columns sidebar">
+      <h4 class="profileTitle">{{formCtrl.currentPatient.firstname.value}} {{formCtrl.currentPatient.lastname.value}} <a value="{{formCtrl.inEditMode ? 'view' : 'edit'}}" ng-click="formCtrl.switchMode()" class="right edit"><i class="fa fa-pencil"></i> Edit</a></h4> 
       <img src="http://placehold.it/200x200" class="circle">
       Rm {{formCtrl.currentPatient.roomnum.value}}
       <hr>
@@ -10,12 +18,12 @@
         <li><a ng-click="formCtrl.fieldFilter = 'Personhood'">Personhood</a></li>
       </ul>
     </div>
-    <div class="large-9 columns">
+    <div class="large-9 columns profileSection">
 <!--      <a ng-click="formCtrl.goBack()"><i class="fa fa-long-arrow-left blue"></i> Back</a>-->
       <div class="break"></div>
-        <div ng-show="formCtrl.showChangeBanner" class="alert-box"><i class="fa fa-bell"></i>&nbsp; A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a></div>
-        <h4>{{formCtrl.getTitleFromFilter(formCtrl.fieldFilter)}}</h4>
-        <input type="button" value="{{formCtrl.inEditMode ? 'view' : 'edit'}}" class="button tiny" ng-click="formCtrl.switchMode()">
+<!--        <div ng-show="formCtrl.showChangeBanner" class="alert-box radius"><i class="fa fa-bell"></i>&nbsp; A change in the patient's data has occured<a ng-click="formCtrl.removeAlert()" class="close">&times;</a></div>-->
+        
+          <h4 class="profileTitle">{{formCtrl.getTitleFromFilter(formCtrl.fieldFilter)}} </h4>
         <form>
           <div ng-show="formCtrl.inEditMode || field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
             <p>{{field.display}} <i ng-if="formCtrl.showChangeBanner && formCtrl.fieldWasChanged(field.id)" tooltip-title="{{formCtrl.getChangeText(field.id)}}" tooltips class="fa fa-info-circle"></i></p>
@@ -23,7 +31,8 @@
             <input ng-show="formCtrl.inEditMode" type="text" ng-if="!field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
             <select ng-show="formCtrl.inEditMode" type="text" ng-if="field.options" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>
           </div>
-          <input ng-show="formCtrl.inEditMode" type="button" value="Save" ng-click="formCtrl.save()">
+          <input ng-show="formCtrl.inEditMode" type="button" class="button large right" value="Save" ng-click="formCtrl.save()">
         </form>
     </div>
   </div>
+</div>
