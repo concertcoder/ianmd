@@ -26,7 +26,7 @@
         
         <h4 class="profileTitle">{{formCtrl.currentPatient.gender.value}} {{formCtrl.getTitleFromFilter(formCtrl.fieldFilter)}} </h4>
         <form ng-if="formCtrl.inEditMode">
-          <div ng-if="field.value" ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
+          <div ng-repeat="(key, field) in formCtrl.getEditableProps(formCtrl.currentPatient)">
             <p>{{field.display}} <i ng-if="formCtrl.showChangeBanner && formCtrl.fieldWasChanged(field.id)" tooltip-title="{{formCtrl.getChangeText(field.id)}}" tooltips class="fa fa-info-circle"></i></p>
             <input ng-if="!field.options" type="text" ng-disabled="!formCtrl.inEditMode" ng-model="field.value">
             <select ng-if="field.options" type="text" ng-options="option for option in field.options" ng-disabled="!formCtrl.inEditMode" ng-model="field.value"></select>
