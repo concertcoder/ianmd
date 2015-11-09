@@ -575,7 +575,7 @@ angular.module('ianmd.constants', [])
       section: 'Personhood',
       subcat: 'Important life events',
       id: 'lifeeventchild',
-      display: 'What are some imporant events from your childhood?',
+      display: 'What are some important events from your childhood?',
       editable: true,
       value: ''
     },
@@ -583,7 +583,7 @@ angular.module('ianmd.constants', [])
       section: 'Personhood',
       subcat: 'Important life events',
       id: 'lifeeventyoungadult',
-      display: 'What are some imporant event from your young adulthood?',
+      display: 'What are some important event from your young adulthood?',
       editable: true,
       value: ''
     },
@@ -591,7 +591,7 @@ angular.module('ianmd.constants', [])
       section: 'Personhood',
       subcat: 'Important life events',
       id: 'lifeeventadult',
-      display: 'What are some imporant event from your adulthood?',
+      display: 'What are some important event from your adulthood?',
       editable: true,
       value: ''
     },
@@ -599,7 +599,7 @@ angular.module('ianmd.constants', [])
       section: 'Personhood',
       subcat: 'Important life events',
       id: 'lifeeventoldage',
-      display: 'What are some imporant event from your old age?',
+      display: 'What are some important event from your old age?',
       editable: true,
       value: ''
     },
